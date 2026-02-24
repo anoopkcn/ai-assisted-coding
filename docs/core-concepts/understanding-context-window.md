@@ -34,13 +34,15 @@ Tools like Claude Code show you exactly how the context window is being used. Th
 - **System tools** — tool definitions available to the model
 - **Messages** — the actual conversation history (inputs + outputs)
 - **Free space** — remaining capacity for new messages and responses
-
+<div style={{maxWidth: '700px'}}>
 ![Claude Code context](./img/context_window_3.png)
+</div>
+
 
 When the context window fills up, the system must either compress older messages, drop them, or start a new conversation. Understanding this helps you write more efficient prompts and manage longer coding sessions.
 
 ## Context window limit for popular models
 
-Different models offer different context window sizes and pricing. Larger context windows allow for longer conversations and more code to be analyzed at once, but typically cost more per token.
+Different models offer different context window sizes and pricing. Larger context windows allow for longer conversations and more code to be analyzed at once, but typically cost more per million token.
 
 <ModelPricingTable />
