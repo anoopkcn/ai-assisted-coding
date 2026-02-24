@@ -1,32 +1,13 @@
-import { useState, useEffect } from "react";
-
-const API_URL = "https://models.dev/api.json";
-
-const MODEL_ORDER = [
-  // Anthropic
-  "claude-opus-4-6",
-  "claude-sonnet-4-6",
-  "claude-haiku-4-5-20251001",
-  // OpenAI
-  "gpt-4.1",
-  "gpt-4.1-mini",
-  "o4-mini",
-  // Google
-  "gemini-2.5-pro",
-  "gemini-2.5-flash",
-  "gemini-2.0-flash",
-];
-const MODEL_SET = new Set(MODEL_ORDER);
+import { usePluginData } from "@docusaurus/useGlobalData";
 
 interface Model {
   id: string;
   name: string;
   provider: string;
-  reasoning?: boolean;
-  tool_call?: boolean;
-  release_date?: string;
-  cost?: { input?: number; output?: number };
-  limit?: { context?: number; output?: number };
+  reasoning: boolean;
+  tool_call: boolean;
+  cost: { input?: number; output?: number };
+  limit: { context?: number; output?: number };
 }
 
 function formatTokens(n?: number): string {
@@ -41,43 +22,7 @@ function formatPrice(price?: number): string {
 }
 
 export default function ModelPricingTable() {
-  const [models, setModels] = useState<Model[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data) => {
-        const result: Model[] = [];
-        for (const [provider, info] of Object.entries<any>(data)) {
-          const providerModels = info.models || {};
-          for (const [id, model] of Object.entries<any>(providerModels)) {
-            if (MODEL_SET.has(id)) {
-              result.push({ ...model, id, provider });
-            }
-          }
-        }
-        const seen = new Set<string>();
-        const deduped = result.filter((m) => {
-          if (seen.has(m.id)) return false;
-          seen.add(m.id);
-          return true;
-        });
-        deduped.sort(
-          (a, b) => MODEL_ORDER.indexOf(a.id) - MODEL_ORDER.indexOf(b.id)
-        );
-        setModels(deduped);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return <p>Loading model data...</p>;
-  if (error) return <p>Failed to load model data: {error}</p>;
+  const { models } = usePluginData("model-pricing") as { models: Model[] };
 
   return (
     <table>
@@ -94,7 +39,7 @@ export default function ModelPricingTable() {
       </thead>
       <tbody>
         {models.map((m) => (
-          <tr key={`${m.provider}-${m.id}`}>
+          <tr key={m.id}>
             <td>{m.name}</td>
             <td>{formatTokens(m.limit?.context)}</td>
             <td>{formatTokens(m.limit?.output)}</td>

@@ -21,6 +21,8 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: ['./plugins/model-pricing'],
+
   presets: [
     [
       'classic',
