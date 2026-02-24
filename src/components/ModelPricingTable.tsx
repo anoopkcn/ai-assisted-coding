@@ -22,9 +22,13 @@ function formatPrice(price?: number): string {
 }
 
 export default function ModelPricingTable() {
-  const { models } = usePluginData("model-pricing") as { models: Model[] };
+  const { models, fetchedAt } = usePluginData("model-pricing") as {
+    models: Model[];
+    fetchedAt: string;
+  };
 
   return (
+    <>
     <table>
       <thead>
         <tr>
@@ -51,5 +55,7 @@ export default function ModelPricingTable() {
         ))}
       </tbody>
     </table>
+    <p><small>Source: <a href="https://models.dev/">models.dev</a> | Data fetched: {new Date(fetchedAt).toLocaleString()}</small></p>
+    </>
   );
 }

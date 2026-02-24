@@ -43,11 +43,11 @@ module.exports = function modelPricingPlugin() {
       result.sort(
         (a, b) => MODEL_ORDER.indexOf(a.id) - MODEL_ORDER.indexOf(b.id)
       );
-      return result;
+      return { models: result, fetchedAt: new Date().toISOString() };
     },
     async contentLoaded({ content, actions }) {
       const { setGlobalData } = actions;
-      setGlobalData({ models: content });
+      setGlobalData(content);
     },
   };
 };
