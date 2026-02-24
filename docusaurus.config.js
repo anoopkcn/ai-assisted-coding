@@ -11,8 +11,8 @@ const config = {
     v4: true,
   },
 
-  url: 'https://ai-assisted-coding.dev',
-  baseUrl: '/',
+  url: 'https://anoopkcn.github.io',
+  baseUrl: '/ai-assisted-coding/',
 
   onBrokenLinks: 'throw',
 
