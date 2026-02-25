@@ -14,8 +14,8 @@ AI-assisted coding uses large language models (LLMs) to help you write, review, 
 ## What You'll Learn
 
 - **Core Concepts** -> Tokens, context windows, temperature, system prompts, and tool use
-- **Prompt Engineering** -> How to communicate effectively with AI coding tools
 - **Tools & Workflows** -> Setting up and using AI tools in your development environment
+- **Prompt Engineering** -> How to communicate effectively with AI coding tools
 - **Best Practices** -> Writing reliable software with AI assistance
 - **Exercises** -> Hands-on practice applying AI-assisted coding techniques to a dummy problem
 
