@@ -56,7 +56,7 @@ const config = {
             label: 'Docs',
           },
 {
-            href: 'https://github.com/anthropics/claude-code',
+            href: 'https://github.com/anoopkcn/ai-assisted-coding',
             label: 'GitHub',
             position: 'right',
           },
