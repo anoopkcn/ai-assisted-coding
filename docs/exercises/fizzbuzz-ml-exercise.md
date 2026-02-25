@@ -594,7 +594,7 @@ Read the existing code and tests first. Run tests after each change.
 <details>
 <summary>Bonus — Create a custom subagent</summary>
 
-Create a custom subagent for ML code review (see [Advanced Features](/tools-workflows/advanced-features#subagents)):
+Create a custom subagent for ML code review (see [Subagents](/tools-workflows/subagents)):
 
 ```yaml
 # .claude/agents/ml-reviewer/SKILL.md
@@ -613,7 +613,7 @@ Review the ML script for:
 
 </details>
 
-**Practices:** [Tool Use and Agentic Coding](/core-concepts/tool-use-and-agentic-coding) (agentic loop), [Advanced Features](/tools-workflows/advanced-features) (subagents, skills)
+**Practices:** [Tool Use and Agentic Coding](/core-concepts/tool-use-and-agentic-coding) (agentic loop), [Subagents](/tools-workflows/subagents), [Skills](/tools-workflows/skills)
 
 ---
 
