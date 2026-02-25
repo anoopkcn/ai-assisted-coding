@@ -12,7 +12,7 @@ Numbers that are divisible by 3 is 'fizz', numbers that are divisible by 5 is 'b
 
 ## Overview
 
-You start with a classic FizzBuzz function and some data generation code. Your job is to use AI assistance to build a complete PyTorch neural network that learns the FizzBuzz pattern from examples. Along the way you'll practice test-driven development, prompt engineering, code review, and agentic workflows.
+You start with a classic FizzBuzz function and some data generation code. Your job is to use AI assistance to build a complete [PyTorch](https://pytorch.org/) neural network that learns the FizzBuzz pattern from examples. Along the way you'll practice test-driven development, prompt engineering, code review, and agentic workflows.
 
 ## What You Start With
 
@@ -65,7 +65,7 @@ After completing this exercise, you will have practiced:
 
 ---
 
-## Task 0 — Set Up the Project Environment
+## Task 0 : Set Up the Project Environment
 
 **Objective:** Create a Python environment using `uv`, initialize a git repo, and write a `CLAUDE.md` file.
 
@@ -114,11 +114,11 @@ Never use bare `python` or `pip` commands.
 
 **Why this matters:** The CLAUDE.md ensures the AI agent always executes code inside the managed environment. Without it, the agent may use the system Python and miss dependencies. This practices [System Prompts and Roles](/core-concepts/system-prompts-and-roles) — you're shaping AI behavior through project-level instructions.
 
-**Practices:** [System Prompts and Roles](/core-concepts/system-prompts-and-roles), [Setting Up Your Environment](/tools-workflows/setting-up)
+**Practices:** [System Prompts and Roles](/core-concepts/system-prompts-and-roles)
 
 ---
 
-## Task 1 — Understand the Problem and Plan
+## Task 1 : Understand the Problem and Plan
 
 **Objective:** Use AI to understand the FizzBuzz ML problem and plan the approach. Do not write implementation code yet.
 
@@ -163,7 +163,7 @@ Too vague — skips the planning phase entirely and you lose the opportunity to 
 
 ---
 
-## Task 2 — Write Tests First (TDD)
+## Task 2 : Write Tests First (TDD)
 
 **Objective:** Before implementing any ML code, use AI to write tests that define what "done" looks like.
 
@@ -274,7 +274,7 @@ def test_predict_returns_valid_string():
 
 ---
 
-## Task 3 — Implement Feature Engineering (Make Tests Pass)
+## Task 3 : Implement Feature Engineering (Make Tests Pass)
 
 **Objective:** Use AI to implement `encode_number` and `prepare_dataset` so the first group of tests pass.
 
@@ -353,7 +353,7 @@ def prepare_dataset(numbers, n_bits=N_BITS):
 
 ---
 
-## Task 4 — Build and Train the PyTorch Model
+## Task 4 : Build and Train the PyTorch Model
 
 **Objective:** Use AI to implement `FizzBuzzNet` and a training loop. Make the model tests pass, then train to a reasonable accuracy.
 
@@ -473,7 +473,7 @@ def test_model_trains_and_improves():
 
 ---
 
-## Task 5 — Evaluate and Improve
+## Task 5 : Evaluate and Improve
 
 **Objective:** Use AI to add proper evaluation: accuracy per class, confusion matrix, and comparison with the ground truth `fizzbuzz()` function.
 
@@ -563,7 +563,7 @@ if __name__ == "__main__":
 
 ---
 
-## Task 6 — Agentic Workflow (Advanced)
+## Task 6 : Agentic Workflow (Advanced)
 
 **Objective:** Use an AI agent in autonomous mode to perform a multi-step improvement. Commit all current work first.
 
