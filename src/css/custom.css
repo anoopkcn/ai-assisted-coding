@@ -47,6 +47,10 @@
   --ifm-font-size-base: 1.0rem;
   --ifm-line-height-base: 1.6;
   --ifm-code-font-size: 95%;
+  --ifm-background-color: hsla(50, 25%, 96%, 1);
+  --ifm-background-surface-color: hsla(50, 25%, 94%, 1);
+  --ifm-code-background: hsl(220, 93%, 42%, 0.1);
+  --prism-background-color: hsl(220, 93%, 42%, 0.08);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -72,5 +76,9 @@ pre > code {
   --ifm-color-primary-light: #a5b4fc;
   --ifm-color-primary-lighter: #c7d2fe;
   --ifm-color-primary-lightest: #e0e7ff;
+  --ifm-background-color: #1b1b1d;
+  --ifm-background-surface-color: #242526;
+  --ifm-code-background: hsl(220, 93%, 50%, 0.2);
+  --prism-background-color: hsl(220, 93%, 50%, 0.15);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
