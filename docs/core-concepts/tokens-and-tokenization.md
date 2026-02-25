@@ -4,13 +4,13 @@ sidebar_position: 1
 
 # Tokens and Tokenization
 
-Before you can understand how AI coding tools work — or why they cost what they do — you need to understand **tokens**. Tokens are the fundamental unit that language models operate on. Everything you send to a model and everything it sends back is measured in tokens.
+Before you can understand how AI coding tools work (or the cost associated with using them) you need to understand **tokens**. Tokens are the fundamental unit that language models operate on. Everything you send to a model and everything it sends back is measured in tokens.
 
 ## What is a token?
 
 A **token** is not a character, and it's not a word. It's a chunk of text that the model's tokenizer has learned to treat as a single unit. In English prose, a token is roughly 4 characters or about three-quarters of a word. But this varies significantly depending on the content.
 
-Common words like "the" or "function" are usually a single token. Less common words get split into multiple tokens. Code tokenizes differently from prose — variable names, operators, and whitespace all get their own treatment.
+Common words like "the" or "function" are usually a single token. Less common words get split into multiple tokens. Code tokenizes differently from prose  variable names, operators, and whitespace all get their own treatment.
 
 Some examples to build intuition:
 
@@ -23,7 +23,7 @@ The exact tokenization depends on which model you're using. Claude, GPT, and Gem
 
 ## How tokenization works
 
-Most modern language models use a method called **Byte Pair Encoding (BPE)** to build their tokenizer. During training, BPE starts with individual characters and repeatedly merges the most frequently occurring pairs into new tokens. The result is a vocabulary of subword units — common words stay whole, while rare words get split into pieces.
+Most modern language models use a method called **Byte Pair Encoding (BPE)** to build their tokenizer. During training, BPE starts with individual characters and repeatedly merges the most frequently occurring pairs into new tokens. The result is a vocabulary of subword units, common words stay whole, while rare words get split into pieces.
 
 This is why you'll sometimes see strange splits. A tokenizer trained mostly on English text will handle `function` as one token but might split a variable name like `getUserAccountBalance` into several pieces (`get`, `User`, `Account`, `Balance`). Code-specialized tokenizers are trained on more source code, so they handle programming patterns more efficiently.
 
@@ -31,7 +31,7 @@ You don't need to memorize how any specific tokenizer works. The key takeaway is
 
 ## Why tokens matter for cost
 
-API pricing is measured in tokens. You pay separately for **input tokens** (what you send to the model) and **output tokens** (what the model generates back). Output tokens are typically more expensive — often 3–5x the cost of input tokens.
+API pricing is measured in tokens. You pay separately for **input tokens** (what you send to the model) and **output tokens** (what the model generates back). Output tokens are typically more expensive, often 3–5x the cost of input tokens.
 
 A practical example: if you send a 200-line file (~4,000 characters) to Claude Sonnet for review, that's roughly 1,000 input tokens. If the model responds with a detailed review of about 800 words, that's roughly another 1,000 output tokens. At typical pricing, the output costs significantly more than the input.
 
@@ -45,7 +45,7 @@ This has real implications for how you use AI coding tools:
 
 ## Why tokens matter for context
 
-The [context window](./context-window.md) — the model's working memory — is measured in tokens. A 200k-token context window doesn't mean 200,000 words. For code, a rough rule of thumb is:
+The [context window](./context-window.md) (think of it as the model's working memory) is measured in tokens. A 200k-token context window doesn't mean 200,000 words. For code, a rough rule of thumb is:
 
 - **1,000 tokens ≈ 40–60 lines of code** (depending on line length and language)
 - **A 200k-token context window ≈ 8,000–12,000 lines of code** at most, and that's before accounting for system prompts, tool definitions, and conversation history
@@ -54,8 +54,8 @@ This means that even with large context windows, you can fill them up faster tha
 
 ## Practical tips
 
-- **Be concise in your prompts** — send the relevant code snippet, not the entire file, when asking for help with a specific function
-- **Structured formats are token-heavy** — JSON, XML, and markdown tables consume more tokens than plain text for the same information. Use them when they add clarity, but be aware of the cost
-- **Code comments and whitespace count** — heavily commented code or code with excessive blank lines uses more tokens than you might expect
-- **Check token counts when cost matters** — most API dashboards show token usage per request, and tools like Claude Code show context window consumption in real time
-- **Different languages tokenize differently** — verbose languages like Java tend to use more tokens per line than concise ones like Python
+- **Be concise in your prompts** - send the relevant code snippet, not the entire file, when asking for help with a specific function
+- **Structured formats are token-heavy** - JSON, XML, and markdown tables consume more tokens than plain text for the same information. Use them when they add clarity, but be aware of the cost
+- **Code comments and whitespace count** - heavily commented code or code with excessive blank lines uses more tokens than you might expect
+- **Check token counts when cost matters** - most API dashboards show token usage per request, and tools like Claude Code show context window consumption in real time
+- **Different languages tokenize differently** - verbose languages like Java tend to use more tokens per line than concise ones like Python

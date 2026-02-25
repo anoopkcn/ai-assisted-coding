@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Temperature and Sampling
 
-Language models don't retrieve pre-written answers. They **generate** text one token at a time, choosing each token based on a probability distribution. The parameters that control how the model makes these choices — temperature, top-p, and top-k — directly affect the quality and consistency of the code you get back.
+Language models don't retrieve pre-written answers. They **generate** text one token at a time, choosing each token based on a probability distribution. The parameters that control how the model makes these choices(temperature, top-p, and top-k) directly affect the quality and consistency of the code you get back.
 
 ## How models generate text
 
@@ -16,7 +16,7 @@ When a model processes your prompt, it produces a probability distribution over 
 - `average` → 7% probability
 - thousands of other tokens with smaller probabilities
 
-The model then **samples** from this distribution to pick the next token. This is why the same prompt can produce different outputs each time — the model doesn't always pick the most likely token.
+The model then **samples** from this distribution to pick the next token. This is why the same prompt can produce different outputs each time. The model doesn't always pick the most likely token.
 
 The sampling parameters let you control how these choices are made.
 
@@ -24,10 +24,10 @@ The sampling parameters let you control how these choices are made.
 
 **Temperature** controls how spread out or concentrated the probability distribution is before sampling.
 
-- **Temperature = 0** — the model always picks the most probable token (deterministic, greedy decoding). This gives you the most predictable, consistent output
-- **Temperature = 0.5** — the distribution is moderately concentrated. High-probability tokens are still favored, but there's some variety
-- **Temperature = 1.0** — the raw probabilities are used as-is. More diverse, sometimes surprising output
-- **Temperature > 1.0** — the distribution is flattened. Even low-probability tokens get a real chance of being picked. Output becomes increasingly random
+- **Temperature = 0** - the model always picks the most probable token (deterministic, greedy decoding). This gives you the most predictable, consistent output
+- **Temperature = 0.5** - the distribution is moderately concentrated. High-probability tokens are still favored, but there's some variety
+- **Temperature = 1.0** - the raw probabilities are used as-is. More diverse, sometimes surprising output
+- **Temperature > 1.0** - the distribution is flattened. Even low-probability tokens get a real chance of being picked. Output becomes increasingly random
 
 For coding tasks, lower temperatures almost always produce better results. You want the model to pick the most likely (and usually most correct) completion, not a creative one.
 
@@ -88,12 +88,12 @@ const response = await openai.chat.completions.create({
 });
 ```
 
-Note that `max_tokens` (or `max_output_tokens`) controls the maximum length of the response, not the randomness. It's separate from the sampling parameters but equally important — setting it too low can result in truncated code.
+Note that `max_tokens` (or `max_output_tokens`) controls the maximum length of the response, not the randomness. It's separate from the sampling parameters but equally important therefore setting it too low can result in truncated code.
 
 ## Practical tips
 
-- **Default to temperature 0 for code** — consistency and correctness matter more than creativity for almost all coding tasks
-- **Prompt quality matters more than temperature** — a well-written prompt at temperature 0 will outperform a vague prompt at any temperature. Invest your time in better prompts, not tuning sampling parameters
-- **Most coding tools handle this for you** — Claude Code, Cursor, and Copilot all set appropriate temperatures internally. You only need to think about this when using the API directly
-- **Use temperature 0 for reproducibility** — if you're building automated pipelines or evaluations, temperature 0 ensures you get the same output for the same input
-- **Don't combine temperature and top-p adjustments** — pick one knob to turn. Adjusting both at once makes it hard to reason about the behavior
+- **Default to temperature 0 for code** - consistency and correctness matter more than creativity for almost all coding tasks
+- **Prompt quality matters more than temperature** - a well-written prompt at temperature 0 will outperform a vague prompt at any temperature. Invest your time in better prompts, not tuning sampling parameters
+- **Most coding tools handle this for you** - Claude Code, Cursor, and Copilot all set appropriate temperatures internally. You only need to think about this when using the API directly
+- **Use temperature 0 for reproducibility** - if you're building automated pipelines or evaluations, temperature 0 ensures you get the same output for the same input
+- **Don't combine temperature and top-p adjustments** - pick one knob to turn. Adjusting both at once makes it hard to reason about the behavior

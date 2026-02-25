@@ -5,7 +5,7 @@ slug: /
 
 # Introduction
 
-Welcome to **AI-Assisted Coding** — a practical guide to writing better software with AI tools.
+Welcome to **AI-Assisted Coding**, a practical guide to writing better software with AI tools.
 
 ## What is AI-Assisted Coding?
 
@@ -13,11 +13,11 @@ AI-assisted coding uses large language models (LLMs) to help you write, review, 
 
 ## What You'll Learn
 
-- **Core Concepts** — Tokens, context windows, temperature, system prompts, and tool use
-- **Prompt Engineering** — How to communicate effectively with AI coding tools
-- **Tools & Workflows** — Setting up and using AI tools in your development environment
-- **Best Practices** — Writing reliable software with AI assistance
-- **Exercises** — Hands-on practice applying AI-assisted coding techniques to a dummy problem
+- **Core Concepts** -> Tokens, context windows, temperature, system prompts, and tool use
+- **Prompt Engineering** -> How to communicate effectively with AI coding tools
+- **Tools & Workflows** -> Setting up and using AI tools in your development environment
+- **Best Practices** -> Writing reliable software with AI assistance
+- **Exercises** -> Hands-on practice applying AI-assisted coding techniques to a dummy problem
 
 ## Who This Is For
 
