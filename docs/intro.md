@@ -9,7 +9,7 @@ Welcome to **AI-Assisted Coding** — a practical guide to writing better softwa
 
 ## What is AI-Assisted Coding?
 
-AI-assisted coding uses large language models (LLMs) to help you write, review, debug, and refactor code. These tools can act as a pair programmer that's available 24/7.
+AI-assisted coding uses large language models (LLMs) to help you write, review, debug, and refactor code.
 
 ## What You'll Learn
 
@@ -17,7 +17,7 @@ AI-assisted coding uses large language models (LLMs) to help you write, review, 
 - **Prompt Engineering** — How to communicate effectively with AI coding tools
 - **Tools & Workflows** — Setting up and using AI tools in your development environment
 - **Best Practices** — Writing reliable software with AI assistance
-- **Exercises** — Hands-on practice applying AI-assisted coding techniques
+- **Exercises** — Hands-on practice applying AI-assisted coding techniques to a dummy problem
 
 ## Who This Is For
 
