@@ -1,6 +1,6 @@
 import ModelPricingTable from '@site/src/components/ModelPricingTable';
 
-# Understanding Context Window
+# Context Window
 
 The **context window** is the total amount of text (measured in tokens) that a language model can process in a single request. It includes everything: your input, the model's previous responses, system instructions, and any other context. Think of it as the model's working memory — everything it can "see" when generating a response.
 
@@ -35,8 +35,8 @@ Tools like Claude Code show you exactly how the context window is being used. Th
 - **Messages** — the actual conversation history (inputs + outputs)
 - **Free space** — remaining capacity for new messages and responses
 <div style={{maxWidth: '600px', margin: '0 auto'}}>
-![Claude Code context](./img/context_window_3.png)
-<p><small>Source: Output of <code>/contex</code> command in Claude Code v2.1.52</small></p>
+    ![Claude Code context](./img/context_window_3.png)
+    <p><small>Source: Output of <code>/contex</code> command in Claude Code v2.1.52</small></p>
 </div>
 
 
