@@ -2,9 +2,13 @@
 sidebar_position: 2
 ---
 
-# FizzBuzz ML Pipeline
+# FizzBuzz ML exercise
 
-Build a machine learning pipeline that learns to predict FizzBuzz from integers — using AI to help you every step of the way.
+Build a machine learning pipeline that learns to predict FizzBuzz from integers using AI to help you every step of the way.
+
+**Example of a fizzbuzz sequence: 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz, 16**
+
+Numbers that are divisible by 3 is 'fizz', numbers that are divisible by 5 is 'buzz', and numbers that are divisible by both 3 and 5 is 'fizzbuzz'.
 
 ## Overview
 
@@ -623,11 +627,3 @@ After completing the exercise, consider these questions:
 4. **Workflow discipline** — How often did you commit? Did small commits make it easier to debug problems?
 5. **CLAUDE.md impact** — Did the AI agent respect the environment instructions? What happened when you removed them?
 6. **Tool comparison** — If you tried multiple AI tools, how did their approaches differ?
-
-## Going Further
-
-- Add a web API serving predictions with FastAPI
-- Visualize training curves with matplotlib
-- Try different architectures (CNN on digit features, transformer)
-- Add CI with GitHub Actions running `uv run pytest`
-- Experiment with `.cursorrules` for Cursor and compare with CLAUDE.md
