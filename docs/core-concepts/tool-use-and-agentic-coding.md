@@ -38,44 +38,6 @@ You send the tool's output back to the model as a `tool_result` message.
 
 The model processes the tool result and either generates a final response or makes another tool call.
 
-Here's what this looks like in practice:
-
-```python
-import anthropic
-
-client = anthropic.Anthropic()
-
-# Define available tools
-my_tools = [
-    {
-        "name": "read_file",
-        "description": "Read the contents of a file at the given path.",
-        "input_schema": {
-            "type": "object",
-            "properties": {
-                "path": {
-                    "type": "string",
-                    "description": "The file path to read"
-                }
-            },
-            "required": ["path"]
-        }
-    }
-]
-
-response = client.messages.create(
-    model="claude-sonnet-4-20250514",
-    max_tokens=4096,
-    tools=my_tools,
-    messages=[
-        {"role": "user", "content": "What does the main function in app.py do?"}
-    ]
-)
-
-# The model might respond with:
-# { "type": "tool_use", "name": "read_file", "input": { "path": "app.py" } }
-```
-
 ### Tool definitions
 
 Good tool definitions make a significant difference in how well the model uses them:

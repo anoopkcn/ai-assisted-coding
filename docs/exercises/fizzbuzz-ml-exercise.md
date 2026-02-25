@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # FizzBuzz ML exercise
 
-Build a machine learning pipeline that learns to predict FizzBuzz from integers using AI to help you every step of the way.
+Build a supervised machine learning algorithm that learns to predict FizzBuzz from integers.  Use an AI agent to help you every step of the way.
 
 **Example of a fizzbuzz sequence: 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz, 16**
 
