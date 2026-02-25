@@ -1,4 +1,11 @@
-/* IA Writer Quattro S is used for monospace/code */
+/* Zed Mono for code */
+@font-face {
+  font-family: "ZedMono";
+  src: url("/fonts/zed-mono-extended.ttf") format("truetype");
+  font-weight: normal;
+}
+
+/* IA Writer Quattro S for body text */
 @font-face {
   font-family: "IA Writer Quattro S";
   font-style: normal;
@@ -6,12 +13,25 @@
   src: url("/fonts/iAWriterQuattroS-Regular.woff2") format("woff2");
 }
 
-/* Lora variable font for body text */
 @font-face {
-  font-family: "Lora";
-  src: url("/fonts/Lora.var.woff2") format("woff2-variations");
-  font-weight: 100 900;
+  font-family: "IA Writer Quattro S";
   font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/iAWriterQuattroS-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IA Writer Quattro S";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/iAWriterQuattroS-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IA Writer Quattro S";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/iAWriterQuattroS-BoldItalic.woff2") format("woff2");
 }
 
 :root {
@@ -22,8 +42,8 @@
   --ifm-color-primary-light: #6366f1;
   --ifm-color-primary-lighter: #818cf8;
   --ifm-color-primary-lightest: #a5b4fc;
-  --ifm-font-family-base: "Lora", serif;
-  --ifm-font-family-monospace: "IA Writer Quattro S", monospace;
+  --ifm-font-family-base: "IA Writer Quattro S", sans-serif;
+  --ifm-font-family-monospace: "ZedMono", monospace;
   --ifm-font-size-base: 1.0rem;
   --ifm-line-height-base: 1.6;
   --ifm-code-font-size: 95%;
@@ -39,7 +59,7 @@ a {
 }
 
 pre > code {
-  font-family: "IA Writer Quattro S", monospace;
+  font-family: "ZedMono", monospace;
   font-size: 1em;
   line-height: 1.3em;
 }
