@@ -46,7 +46,7 @@ import anthropic
 client = anthropic.Anthropic()
 
 # Define available tools
-tools = [
+my_tools = [
     {
         "name": "read_file",
         "description": "Read the contents of a file at the given path.",
@@ -66,7 +66,7 @@ tools = [
 response = client.messages.create(
     model="claude-sonnet-4-20250514",
     max_tokens=4096,
-    tools=tools,
+    tools=my_tools,
     messages=[
         {"role": "user", "content": "What does the main function in app.py do?"}
     ]

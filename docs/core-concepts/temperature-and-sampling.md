@@ -40,6 +40,8 @@ For coding tasks, lower temperatures almost always produce better results. You w
 | Brainstorming | 0.7–1.0 | You want diverse ideas |
 | Creative writing | 0.8–1.0 | Variety and surprise are the point |
 
+<p><small>The temperature recommendation is based on author's own experience. The literature(https://arxiv.org/pdf/2402.05201) broadly supports this view.</small></p>
+
 ## Top-p (nucleus sampling)
 
 **Top-p** (also called **nucleus sampling**) is an alternative way to control randomness. Instead of adjusting the distribution shape, it limits which tokens the model can choose from.
