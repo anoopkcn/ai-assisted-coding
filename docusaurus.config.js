@@ -92,7 +92,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} AI-Assisted Coding. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} AI-Assisted Coding.`,
       },
       prism: {
         theme: prismThemes.github,
