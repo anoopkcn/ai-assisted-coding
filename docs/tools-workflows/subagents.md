@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 # Subagents
@@ -8,10 +8,10 @@ Subagents are specialized AI assistants that run in isolated contexts with their
 
 ## Why subagents matter
 
-- **Context isolation** — verbose output (test results, large searches) stays out of your main conversation
-- **Tool restrictions** — a research subagent can be limited to read-only tools
-- **Parallelism** — multiple subagents can work simultaneously on different parts of a codebase
-- **Cost control** — route simple tasks to faster, cheaper models
+- **Context isolation** - verbose output (test results, large searches) stays out of your main conversation
+- **Tool restrictions** - a research subagent can be limited to read-only tools
+- **Parallelism** - multiple subagents can work simultaneously on different parts of a codebase
+- **Cost control** - route simple tasks to faster, cheaper models
 
 ## Built-in subagent types (Claude Code)
 
@@ -55,4 +55,4 @@ Subagents can be scoped to a project (`.claude/agents/`) or to all your projects
 
 ## Comparison with other tools
 
-**Cursor** has an agent mode that operates similarly to Claude Code's agentic loop — it can read, write, and run commands autonomously. However, Cursor doesn't expose the concept of multiple specialized subagents running in parallel; its agent mode is a single execution context.
+**Cursor** has an agent mode that operates similarly to Claude Code's agentic loop - it can read, write, and run commands autonomously. However, Cursor doesn't expose the concept of multiple specialized subagents running in parallel; its agent mode is a single execution context.

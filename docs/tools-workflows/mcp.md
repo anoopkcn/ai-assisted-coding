@@ -1,10 +1,10 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # MCP (Model Context Protocol)
 
-MCP is an open standard for connecting AI tools to external services. For a conceptual overview, see [Tool Use and Agentic Coding](../core-concepts/tool-use-and-agentic-coding.md#model-context-protocol-mcp). This section focuses on practical setup.
+The **Model Context Protocol (MCP)** is an open standard for connecting language models to external tools and data sources. Think of it like USB for AI tools, a standardized way to plug in new capabilities without building custom integrations for each one.
 
 ## Adding MCP servers (Claude Code)
 
@@ -12,7 +12,7 @@ MCP is an open standard for connecting AI tools to external services. For a conc
 claude mcp add --transport http -s user context7 https://mcp.context7.com/mcp
 ```
 
-## Configuration scopes (-s)
+## Configuration scopes `-s`
 
 | Scope | flag | Stored in  | Use for |
 |-------|-------|--------|---------|

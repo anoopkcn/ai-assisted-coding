@@ -1,15 +1,15 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Hooks
 
-Hooks are shell commands that execute automatically at specific points in Claude Code's lifecycle. Unlike the AI's decisions (which can vary), hooks are **deterministic** — they always run when their trigger condition is met.
+Hooks are shell commands that execute automatically at specific points in Claude Code's lifecycle. Unlike the AI's decisions (which can vary), hooks are **deterministic** they always run when their trigger condition is met. A well constructed hook can save you precious tokens :D
 
 ## Common use cases
 
 - Auto-format files after every edit
-- Block edits to protected files (`.env`, lock files)
+- Block edits to protected files. For example `.env`, lock files
 - Send desktop notifications when Claude needs attention
 - Run linters or validators after code changes
 - Log all shell commands for auditing
@@ -40,7 +40,7 @@ Hooks live in `.claude/settings.json` (project-scoped, shareable) or `~/.claude/
         "hooks": [
           {
             "type": "command",
-            "command": "jq -r '.tool_input.file_path' | xargs npx prettier --write"
+            "command": "jq -r '.tool_input.file_path' | xargs ruff format"
           }
         ]
       }
@@ -80,7 +80,7 @@ Hooks live in `.claude/settings.json` (project-scoped, shareable) or `~/.claude/
         "hooks": [
           {
             "type": "command",
-            "command": "FILE=$(jq -r '.tool_input.file_path'); case \"$FILE\" in *.env*|*lock.json) echo \"Blocked: $FILE is protected\" >&2; exit 2;; esac"
+            "command": "FILE=$(jq -r '.tool_input.file_path'); case \"$FILE\" in *.env*|*requirements*.txt|*lock*) echo \"Blocked: $FILE is protected\" >&2; exit 2;; esac"
           }
         ]
       }
