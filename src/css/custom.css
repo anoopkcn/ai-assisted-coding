@@ -1,59 +1,17 @@
+/* IA Writer Quattro S is used for monospace/code */
 @font-face {
-  font-family: "ZedSans";
-  src: url("/fonts/zed/zed-sans-extended.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "IA Writer Quattro S";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/iAWriterQuattroS-Regular.woff2") format("woff2");
 }
 
+/* Lora variable font for body text */
 @font-face {
-  font-family: "ZedSans";
-  src: url("/fonts/zed/zed-sans-extendedextrabold.ttf") format("truetype");
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: "ZedSans";
-  src: url("/fonts/zed/zed-sans-extendedextrabolditalic.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "ZedSans";
-  src: url("/fonts/zed/zed-sans-extendedbold.ttf") format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "ZedSans";
-  src: url("/fonts/zed/zed-sans-extendedbolditalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "ZedSans";
-  src: url("/fonts/zed/zed-sans-extendeditalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "ZedSans";
-  src: url("/fonts/zed/zed-sans-extendedlight.ttf") format("truetype");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "ZedSans";
-  src: url("/fonts/zed/zed-sans-extendedlightitalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "ZedMono";
-  src: url("/fonts/zed/zed-mono-extended.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Lora";
+  src: url("/fonts/Lora.var.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 :root {
@@ -64,8 +22,8 @@
   --ifm-color-primary-light: #6366f1;
   --ifm-color-primary-lighter: #818cf8;
   --ifm-color-primary-lightest: #a5b4fc;
-  --ifm-font-family-base: "ZedSans", sans-serif;
-  --ifm-font-family-monospace: "ZedMono", monospace;
+  --ifm-font-family-base: "Lora", serif;
+  --ifm-font-family-monospace: "IA Writer Quattro S", monospace;
   --ifm-font-size-base: 1.0rem;
   --ifm-line-height-base: 1.6;
   --ifm-code-font-size: 95%;
@@ -81,7 +39,7 @@ a {
 }
 
 pre > code {
-  font-family: "ZedMono", monospace;
+  font-family: "IA Writer Quattro S", monospace;
   font-size: 1em;
   line-height: 1.3em;
 }

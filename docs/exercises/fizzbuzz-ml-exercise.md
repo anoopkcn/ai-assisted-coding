@@ -52,7 +52,7 @@ You must use AI to build everything else: feature engineering, model training (P
 
 ## Learning Objectives
 
-After completing this exercise, you will have practiced:
+After completing this exercise, you will have learned:
 
 - Using AI to understand a problem and plan an ML approach
 - Writing effective prompts that produce actionable AI output
@@ -61,7 +61,7 @@ After completing this exercise, you will have practiced:
 - Conducting AI-assisted code review
 - Iterating incrementally with version control discipline
 - Running multi-step agentic workflows
-- Configuring project context (CLAUDE.md) to guide AI behavior
+- Configuring project context (`CLAUDE.md` and/or `AGENTS.md`) to guide AI behavior
 
 ---
 
@@ -589,7 +589,7 @@ Read the existing code and tests first. Run tests after each change.
 - Does the agent read files before editing?
 - Does it run tests after each change?
 - How does it handle test failures — does it fix them or get stuck in a loop?
-- Does it update CLAUDE.md as instructed?
+- Does it update `CLAUDE.md` as instructed?
 
 <details>
 <summary>Bonus — Create a custom subagent</summary>
