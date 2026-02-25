@@ -89,6 +89,10 @@ const config = {
                 label: 'Best Practices',
                 to: '/category/best-practices',
               },
+              {
+                label: 'Exercises',
+                to: '/category/exercises',
+              },
             ],
           },
         ],

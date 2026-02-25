@@ -1,3 +1,61 @@
+@font-face {
+  font-family: "ZedSans";
+  src: url("/fonts/zed/zed-sans-extended.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "ZedSans";
+  src: url("/fonts/zed/zed-sans-extendedextrabold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "ZedSans";
+  src: url("/fonts/zed/zed-sans-extendedextrabolditalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ZedSans";
+  src: url("/fonts/zed/zed-sans-extendedbold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "ZedSans";
+  src: url("/fonts/zed/zed-sans-extendedbolditalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ZedSans";
+  src: url("/fonts/zed/zed-sans-extendeditalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ZedSans";
+  src: url("/fonts/zed/zed-sans-extendedlight.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "ZedSans";
+  src: url("/fonts/zed/zed-sans-extendedlightitalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ZedMono";
+  src: url("/fonts/zed/zed-mono-extended.ttf") format("truetype");
+  font-weight: normal;
+}
+
 :root {
   --ifm-color-primary: #4f46e5;
   --ifm-color-primary-dark: #4338ca;
@@ -6,12 +64,26 @@
   --ifm-color-primary-light: #6366f1;
   --ifm-color-primary-lighter: #818cf8;
   --ifm-color-primary-lightest: #a5b4fc;
+  --ifm-font-family-base: "ZedSans", sans-serif;
+  --ifm-font-family-monospace: "ZedMono", monospace;
+  --ifm-font-size-base: 1.1rem;
+  --ifm-line-height-base: 1.6;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 article img {
   border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+pre > code {
+  font-family: "ZedMono", monospace;
+  font-size: 1em;
+  line-height: 1.3em;
 }
 
 [data-theme='dark'] {
