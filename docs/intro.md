@@ -21,9 +21,9 @@ AI-assisted coding uses large language models (LLMs) to help you write, review, 
 
 ## Who This Is For
 
+- Anyone curious about the practical side of AI-assisted development
 - Developers looking to integrate AI tools into their workflow
 - Teams evaluating AI coding assistants
-- Anyone curious about the practical side of AI-assisted development
 
 ## Getting Started
 
