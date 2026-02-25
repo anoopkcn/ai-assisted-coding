@@ -34,8 +34,9 @@ Tools like Claude Code show you exactly how the context window is being used. Th
 - **System tools** — tool definitions available to the model
 - **Messages** — the actual conversation history (inputs + outputs)
 - **Free space** — remaining capacity for new messages and responses
-<div style={{maxWidth: '700px'}}>
+<div style={{maxWidth: '600px', margin: '0 auto'}}>
 ![Claude Code context](./img/context_window_3.png)
+<p><small>Source: Output of <code>/contex</code> command in Claude Code v2.1.52</small></p>
 </div>
 
 
