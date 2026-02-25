@@ -1,19 +1,28 @@
-const MODEL_ORDER = [
-  // Anthropic
-  "claude-opus-4-6",
-  "claude-sonnet-4-6",
-  "claude-haiku-4-5-20251001",
-  // OpenAI
-  "gpt-4.1",
-  "gpt-4.1-mini",
-  "o4-mini",
-  // Google
-  "gemini-2.5-pro",
-  "gemini-2.5-flash",
-  "gemini-2.0-flash",
+// Providers to include, and which model families to select per provider (in display order).
+// Families are stable (e.g. "claude-opus") while model IDs change with each release.
+// Update these if a provider introduces an entirely new family tier.
+const PROVIDER_FAMILIES = {
+  anthropic: ["claude-opus", "claude-sonnet", "claude-haiku"],
+  openai: ["gpt", "gpt-mini", "o-mini"],
+  google: ["gemini-pro", "gemini-flash", "gemini-flash-lite"],
+};
+
+// Model IDs matching any of these patterns are excluded (previews, aliases, embeddings, etc.)
+const EXCLUDE_PATTERNS = [
+  /embedding/,
+  /tts/,
+  /live/,
+  /-image/,
+  /deep-research/,
+  /codex/,
+  /preview/,
+  /latest$/,
+  /-\d{8}$/, // date-suffixed variants like claude-3-5-sonnet-20241022
 ];
 
-const MODEL_SET = new Set(MODEL_ORDER);
+function shouldExclude(id) {
+  return EXCLUDE_PATTERNS.some((re) => re.test(id));
+}
 
 module.exports = function modelPricingPlugin() {
   return {
@@ -22,27 +31,42 @@ module.exports = function modelPricingPlugin() {
       const res = await fetch("https://models.dev/api.json");
       const data = await res.json();
       const result = [];
-      const seen = new Set();
-      for (const [provider, info] of Object.entries(data)) {
-        const providerModels = info.models || {};
-        for (const [id, model] of Object.entries(providerModels)) {
-          if (MODEL_SET.has(id) && !seen.has(id)) {
-            seen.add(id);
-            result.push({
-              id,
-              name: model.name,
-              provider,
-              reasoning: model.reasoning ?? false,
-              tool_call: model.tool_call ?? false,
-              cost: model.cost || {},
-              limit: model.limit || {},
-            });
+
+      for (const [providerId, families] of Object.entries(PROVIDER_FAMILIES)) {
+        const providerData = data[providerId];
+        if (!providerData?.models) continue;
+
+        // Group eligible models by family, keeping only the latest release per family
+        const latestByFamily = {};
+        for (const [id, model] of Object.entries(providerData.models)) {
+          if (shouldExclude(id)) continue;
+          if (model.deprecated) continue;
+          if (!model.cost?.input && !model.cost?.output) continue;
+
+          const family = model.family;
+          const release = model.release_date || "1970-01-01";
+          if (!latestByFamily[family] || release > latestByFamily[family].release) {
+            latestByFamily[family] = { id, release, model };
           }
         }
+
+        // Pick models in the defined family order
+        for (const family of families) {
+          const entry = latestByFamily[family];
+          if (!entry) continue;
+          const { id, model } = entry;
+          result.push({
+            id,
+            name: model.name,
+            provider: providerId,
+            reasoning: model.reasoning ?? false,
+            tool_call: model.tool_call ?? false,
+            cost: model.cost || {},
+            limit: model.limit || {},
+          });
+        }
       }
-      result.sort(
-        (a, b) => MODEL_ORDER.indexOf(a.id) - MODEL_ORDER.indexOf(b.id)
-      );
+
       return { models: result, fetchedAt: new Date().toISOString() };
     },
     async contentLoaded({ content, actions }) {
