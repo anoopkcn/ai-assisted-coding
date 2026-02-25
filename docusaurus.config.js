@@ -32,6 +32,7 @@ const config = {
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
         },
+        pages: {},
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
@@ -55,7 +56,8 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-{
+          {to: '/notice', label: 'Notice', position: 'left'},
+          {
             href: 'https://github.com/anoopkcn/ai-assisted-coding',
             label: 'GitHub',
             position: 'right',
@@ -64,38 +66,6 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Getting Started',
-                to: '/',
-              },
-              {
-                label: 'Tools & Workflows',
-                to: '/category/tools--workflows',
-              },
-            ],
-          },
-          {
-            title: 'Topics',
-            items: [
-              {
-                label: 'Prompt Engineering',
-                to: '/category/prompt-engineering',
-              },
-              {
-                label: 'Best Practices',
-                to: '/category/best-practices',
-              },
-              {
-                label: 'Exercises',
-                to: '/category/exercises',
-              },
-            ],
-          },
-        ],
         copyright: `Copyright © ${new Date().getFullYear()} AI-Assisted Coding`,
       },
       prism: {
