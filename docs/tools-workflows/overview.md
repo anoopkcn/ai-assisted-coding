@@ -6,36 +6,37 @@ sidebar_position: 1
 
 A quick look at the most popular AI coding assistants available.
 
+## API Platforms
+
+| Platform | Description |
+|----------|-------------|
+| [**Anthropic API**](https://docs.anthropic.com/en/api/getting-started) | Access to Claude models for building AI-powered coding tools and applications |
+| [**OpenAI API**](https://platform.openai.com/docs) | Access to GPT and Codex models for code generation, editing, and analysis |
+| [**Google Gemini API**](https://ai.google.dev/docs) | Access to Gemini models for building generative AI coding applications |
+
 ## CLI Tools
 
 | Tool | Description |
 |------|-------------|
-| **Claude Code** | Anthropic's CLI agent for code generation, debugging, and refactoring |
-| **OpenAI Codex CLI** | OpenAI's terminal coding agent for editing, running, and reviewing code |
-| **Gemini CLI** | Google's command-line coding assistant for repo-aware development workflows |
-| **GitHub Copilot CLI** | Command-line interface for GitHub Copilot |
+| [**Claude Code**](https://docs.anthropic.com/en/docs/claude-code/overview) | Anthropic's CLI agent for code generation, debugging, and refactoring |
+| [**OpenAI Codex CLI**](https://github.com/openai/codex) | OpenAI's terminal coding agent for editing, running, and reviewing code |
+| [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) | Google's command-line coding assistant for repo-aware development workflows |
+| [**GitHub Copilot CLI**](https://github.com/github/copilot-cli) | Command-line interface for GitHub Copilot |
 
 ## IDE Extensions
 
 | Tool | Description |
 |------|-------------|
-| **GitHub Copilot** | Inline code completions for VS Code, JetBrains, and more |
-| **Gemini Code Assist** | Google's AI coding assistant for IDEs with code completion and chat |
-| **Cursor** | AI-first code editor built on VS Code |
-| **Windsurf** | AI-powered IDE by Codeium |
+| [**GitHub Copilot**](https://github.com/features/copilot) | Inline code completions for VS Code, JetBrains, and more |
+| [**Gemini Code Assist**](https://codeassist.google/) | Google's AI coding assistant for IDEs with code completion and chat |
+| [**Cursor**](https://cursor.com/) | AI-first code editor built on VS Code |
+| [**Windsurf**](https://windsurf.com/) | AI-powered IDE by Codeium |
 
 ## Chat-Based Assistants
 
 | Tool | Description |
 |------|-------------|
-| **ChatGPT (OpenAI)** | General-purpose AI assistant commonly used for code generation, debugging, and design help |
-| **Gemini (Google)** | General-purpose AI assistant useful for coding support, explanations, and refactoring ideas |
+| [**Claude (Anthropic)**](https://claude.ai/) | General-purpose AI assistant with strong coding, analysis, and reasoning capabilities |
+| [**ChatGPT (OpenAI)**](https://chatgpt.com/) | General-purpose AI assistant commonly used for code generation, debugging, and design help |
+| [**Gemini (Google)**](https://gemini.google.com/) | General-purpose AI assistant useful for coding support, explanations, and refactoring ideas |
 
-## Choosing the Right Tool
-
-Consider these factors when picking an AI coding tool:
-
-- **Inline vs. chat** — Do you want autocomplete-style suggestions or a conversational interface?
-- **Context handling** — How much of your codebase can the tool understand at once?
-- **Language support** — Some tools work better with certain languages
-- **Privacy** — Where does your code get sent? Can you use a local model?
