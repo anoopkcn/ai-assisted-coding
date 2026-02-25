@@ -1,8 +1,12 @@
+---
+sidebar_position: 2
+---
+
 import ModelPricingTable from '@site/src/components/ModelPricingTable';
 
 # Context Window
 
-The **context window** is the total amount of text (measured in tokens) that a language model can process in a single request. It includes everything: your input, the model's previous responses, system instructions, and any other context. Think of it as the model's working memory — everything it can "see" when generating a response.
+The **context window** is the total amount of text (measured in [tokens](./tokens-and-tokenization.md)) that a language model can process in a single request. It includes everything: your input, the model's previous responses, system instructions, and any other context. Think of it as the model's working memory — everything it can "see" when generating a response.
 
 ## How a single request works
 
@@ -30,7 +34,7 @@ This is why long conversations can eventually hit the context limit — the mode
 
 Tools like Claude Code show you exactly how the context window is being used. The breakdown typically includes:
 
-- **System prompt** — instructions that define the model's behavior
+- **[System prompt](./system-prompts-and-roles.md)** — instructions that define the model's behavior
 - **System tools** — tool definitions available to the model
 - **Messages** — the actual conversation history (inputs + outputs)
 - **Free space** — remaining capacity for new messages and responses
@@ -41,6 +45,43 @@ Tools like Claude Code show you exactly how the context window is being used. Th
 
 
 When the context window fills up, the system must either compress older messages, drop them, or start a new conversation. Understanding this helps you write more efficient prompts and manage longer coding sessions.
+
+## What happens as the context window fills up
+
+As your conversation grows and the context window approaches its limit, several things change that can affect the quality and reliability of the model's responses.
+
+### Autocompaction
+
+When the context window is nearly full, tools like Claude Code will **autocompact** the conversation — automatically summarizing or dropping older messages to free up space. This keeps the conversation going, but comes with trade-offs:
+
+- **Lost detail** — specific code snippets, file paths, or exact instructions from earlier in the conversation may be compressed into vague summaries
+- **Broken references** — if you refer back to something discussed earlier, the model may no longer have access to the original content
+- **Repeated work** — the model might re-read files or re-run commands it already performed, because the earlier results were compacted away
+
+You can usually tell autocompaction has occurred when the model seems to "forget" something you discussed a few messages ago, or when it starts asking questions you've already answered.
+
+### Information ambiguity
+
+A full context window means the model is juggling a large amount of information at once. This can lead to:
+
+- **Conflicting instructions** — earlier guidance may contradict later corrections, and the model has to choose which to follow. With more context, there are more opportunities for ambiguity
+- **Diluted focus** — the model gives roughly equal weight to all tokens in context. Important instructions from early in the conversation compete with less relevant content from recent messages
+- **Stale context** — code you discussed at the start of the session may have since been modified. The model might reference outdated versions of files that are still sitting in the context window
+
+### Degraded performance
+
+Large contexts don't just risk information loss — they can reduce overall response quality:
+
+- **Slower responses** — processing more tokens takes more time and costs more per request
+- **Lower accuracy** — models perform worse on tasks that require finding specific information buried in long contexts (the ["needle in a haystack"](https://arize.com/blog-course/the-needle-in-a-haystack-test-evaluating-the-performance-of-llm-rag-systems/) problem). Research such as [*Lost in the Middle*](https://arxiv.org/abs/2307.03172) (Liu et al.) and [*Context Rot*](https://research.trychroma.com/context-rot) (Chroma Research) demonstrates that performance degrades as context length increases, with information in the middle of long contexts being particularly hard for models to use
+- **Reduced instruction following** — with thousands of tokens of conversation history, the model is more likely to drift from your original intent or constraints
+
+### Practical tips
+
+- **Start fresh sessions** for new tasks rather than continuing a long conversation
+- **Be explicit** when referencing earlier context — re-state key details rather than saying "like I mentioned before"
+- **Front-load important instructions** — system prompts and key constraints should be at the start, where they're less likely to be compacted
+- **Watch the context indicator** — when you're past 50-60% usage, consider whether continuing the session or starting a new one makes more sense
 
 ## Context window limit for popular models
 
