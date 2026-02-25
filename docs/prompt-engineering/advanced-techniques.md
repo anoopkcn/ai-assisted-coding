@@ -34,6 +34,38 @@ Implement the search feature using only the standard library —
 no external dependencies. Target Python 3.10+.
 ```
 
+## Require Clarifying Questions for Ambiguous Tasks
+
+Prevent incorrect assumptions by telling the model to ask before coding:
+
+```
+If any requirement is ambiguous, ask up to 3 clarifying questions
+before proposing implementation details.
+```
+
+## Use a Two-Pass Workflow
+
+For complex changes, separate planning from implementation:
+
+1. **Pass 1 (Plan)** — Ask for approach, risks, and files to change
+2. **Pass 2 (Implement)** — Ask for the actual patch and tests
+
+Example:
+```
+First, provide a plan only: architecture impact, files to edit,
+and migration risk. Do not write code yet.
+```
+
+## Ground Answers in Real Files
+
+Reduce hallucinations by requiring concrete file references:
+
+```
+Only use APIs and modules that already exist in this repository.
+List exact files/functions you used as references.
+If something is missing, state it explicitly instead of inventing it.
+```
+
 ## Request Tests Alongside Code
 
 ```
@@ -52,4 +84,16 @@ Add a "last_login" timestamp to the User model. This will need:
 - Updated model definition
 - Changes to the login endpoint to record the timestamp
 - Updated API response to include the field
+```
+
+## Ask for Self-Checks Before Final Output
+
+Have the model verify its own output before presenting:
+
+```
+Before finalizing:
+1. Check for breaking API changes
+2. Check for missing imports
+3. Check that tests cover happy path and key edge cases
+Then provide final patch and test commands.
 ```

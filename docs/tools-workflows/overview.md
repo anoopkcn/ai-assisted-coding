@@ -4,24 +4,32 @@ sidebar_position: 1
 
 # AI Coding Tools Overview
 
-A quick look at the most popular AI coding assistants available today.
+A quick look at the most popular AI coding assistants available.
 
 ## CLI Tools
 
 | Tool | Description |
 |------|-------------|
 | **Claude Code** | Anthropic's CLI agent for code generation, debugging, and refactoring |
+| **OpenAI Codex CLI** | OpenAI's terminal coding agent for editing, running, and reviewing code |
+| **Gemini CLI** | Google's command-line coding assistant for repo-aware development workflows |
 | **GitHub Copilot CLI** | Command-line interface for GitHub Copilot |
-| **Aider** | Open-source AI pair programming in your terminal |
 
 ## IDE Extensions
 
 | Tool | Description |
 |------|-------------|
 | **GitHub Copilot** | Inline code completions for VS Code, JetBrains, and more |
+| **Gemini Code Assist** | Google's AI coding assistant for IDEs with code completion and chat |
 | **Cursor** | AI-first code editor built on VS Code |
-| **Cline** | Autonomous coding agent for VS Code |
 | **Windsurf** | AI-powered IDE by Codeium |
+
+## Chat-Based Assistants
+
+| Tool | Description |
+|------|-------------|
+| **ChatGPT (OpenAI)** | General-purpose AI assistant commonly used for code generation, debugging, and design help |
+| **Gemini (Google)** | General-purpose AI assistant useful for coding support, explanations, and refactoring ideas |
 
 ## Choosing the Right Tool
 
