@@ -21,7 +21,20 @@ const config = {
     locales: ['en'],
   },
 
-  plugins: ['./plugins/model-pricing'],
+  plugins: [
+    './plugins/model-pricing',
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        docsRouteBasePath: '/',
+        indexDocs: true,
+        indexPages: true,
+        indexBlog: false,
+        language: ['en'],
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -64,6 +77,10 @@ const config = {
           {to: '/notice', label: 'Notice', position: 'left'},
           {
             type: 'docsVersionDropdown',
+            position: 'right',
+          },
+          {
+            type: 'search',
             position: 'right',
           },
           {
