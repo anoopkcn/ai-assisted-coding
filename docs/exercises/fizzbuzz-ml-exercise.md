@@ -67,13 +67,15 @@ After completing this exercise, you will have learned:
 
 | Task | Suggested Time | Success checkpoint |
 |------|----------------|--------------------|
-| Task 0: Environment setup | 10-20 min | `uv run pytest` executes in the project environment |
+| Task 0: Environment setup | 10-15 min | `uv run pytest` executes in the project environment |
 | Task 1: Planning | 10-15 min | You have a written model/data plan before coding |
-| Task 2: Tests first | 20-30 min | Tests exist and fail for the right reason (missing implementation) |
-| Task 3: Feature engineering | 20-30 min | Encoding/dataset tests pass |
-| Task 4: Model + training | 30-45 min | Model shape and training tests pass |
-| Task 5: Evaluation | 20-30 min | Evaluation report produced with accuracy + per-class metrics |
-| Task 6: Agentic workflow | 30-60 min | Agent performs read-edit-test cycles with reviewable commits |
+| Task 2: Tests first | 15-20 min | Tests exist and fail for the right reason (missing implementation) |
+| Task 3: Feature engineering | 10-15 min | Encoding/dataset tests pass |
+| Task 4: Model + training | 20-25 min | Model shape and training tests pass |
+| Task 5: Evaluation | 15-30 min | Evaluation report produced with accuracy + per-class metrics |
+| Task 6: Agentic workflow | 20-30 min | Agent performs read-edit-test cycles with reviewable commits |
+
+Estimated time: 1.5 to 2.5 hours
 
 ---
 
