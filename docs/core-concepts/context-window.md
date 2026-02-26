@@ -34,7 +34,7 @@ This is why long conversations can eventually hit the context limit i.e the mode
 As your conversation progresses and the context window approaches its limit, several factors change that can impact the quality and reliability of the model's responses. The following plot provides the claimed versus the effective context length of some models. As you can see, the effective context length is much smaller than the claimed one in all models studied.
 
 ![claimed vs actual](./img/context_window_ref.png)
-<p><small>Source: [A Comprehensive Survey on Long Context Language Modeling](10.48550/arXiv.2503.17407)(section 7.1.1 Table 9) </small></p>
+<p><small>Source: [A Comprehensive Survey on Long Context Language Modeling](https://arxiv.org/abs/2503.17407)(section 7.1.1 Table 9) </small></p>
 
 ## Context window in practice
 
