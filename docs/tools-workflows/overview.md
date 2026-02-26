@@ -17,7 +17,7 @@ A quick look at the most popular AI coding assistants available.
 | [**Google Gemini API**](https://ai.google.dev/docs) | Access to Gemini models for building generative AI coding applications |
 | [**Blablador**](https://sdlaml.pages.jsc.fz-juelich.de/ai/guides/blablador_api_access/) | Access to models hosted by Blablador for building generative AI coding applications |
 
-<p><small>Not all models hosted by Blablador are trained by JSC, you can check the model details to look for the ones trained by [JSC AI team](https://sdlaml.pages.jsc.fz-juelich.de/ai/)</small></p>
+<p><small>Not all models hosted by Blablador are trained by [JSC](https://www.fz-juelich.de/en/jsc), you can check the model details to look for the ones trained by [JSC AI team](https://sdlaml.pages.jsc.fz-juelich.de/ai/)</small></p>
 
 ## CLI Tools
 
