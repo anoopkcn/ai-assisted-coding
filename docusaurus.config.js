@@ -59,6 +59,10 @@ const config = {
           },
           {to: '/notice', label: 'Notice', position: 'left'},
           {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/anoopkcn/ai-assisted-coding',
             label: 'GitHub',
             position: 'right',

@@ -1,0 +1,62 @@
+name: Create Docs Version On Tag
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  version-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Resolve tag name
+        id: tag
+        run: |
+          echo "name=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+          echo "safe_name=$(echo "${GITHUB_REF_NAME}" | tr '/:@' '-')" >> "$GITHUB_OUTPUT"
+
+      - name: Check whether docs version already exists
+        id: exists
+        run: |
+          if [ -f versions.json ] && jq -e --arg v "${{ steps.tag.outputs.name }}" '.[] | select(. == $v)' versions.json >/dev/null; then
+            echo "value=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Docusaurus docs version
+        if: steps.exists.outputs.value == 'false'
+        run: npx docusaurus docs:version "${{ steps.tag.outputs.name }}"
+
+      - name: Create pull request with versioned docs
+        if: steps.exists.outputs.value == 'false'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: chore/docs-version-${{ steps.tag.outputs.safe_name }}
+          base: main
+          title: "docs: add Docusaurus version ${{ steps.tag.outputs.name }}"
+          commit-message: "docs: add Docusaurus version ${{ steps.tag.outputs.name }}"
+          body: |
+            Auto-generated docs version for git tag `${{ steps.tag.outputs.name }}`.
+          add-paths: |
+            versions.json
+            versioned_docs/**
+            versioned_sidebars/**
