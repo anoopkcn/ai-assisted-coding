@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 import ModelPricingTable from '@site/src/components/ModelPricingTable';
@@ -30,6 +30,12 @@ Here, the second request includes the original input and response *plus* the new
 
 This is why long conversations can eventually hit the context limit i.e the model simply runs out of space to hold all the previous exchanges plus generate a new response.
 
+## What happens as the context window fills up
+As your conversation progresses and the context window approaches its limit, several factors change that can impact the quality and reliability of the model's responses. The following plot provides the claimed versus the effective context length of some models. As you can see, the effective context length is much smaller than the claimed one in all models studied.
+
+![claimed vs actual](./img/context_window_ref.png)
+<p><small>Source: [A Comprehensive Survey on Long Context Language Modeling](10.48550/arXiv.2503.17407)(section 7.1.1 Table 9) </small></p>
+
 ## Context window in practice
 
 Tools like Claude Code show you exactly how the context window is being used. The breakdown typically includes:
@@ -45,10 +51,6 @@ Tools like Claude Code show you exactly how the context window is being used. Th
 
 
 When the context window fills up, the system must either compress older messages, drop them, or start a new conversation. Understanding this helps you write more efficient prompts and manage longer coding sessions.
-
-## What happens as the context window fills up
-
-As your conversation grows and the context window approaches its limit, several things change that can affect the quality and reliability of the model's responses.
 
 ### Autocompaction
 
