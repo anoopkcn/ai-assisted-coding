@@ -5,6 +5,8 @@ slug: /
 
 # Introduction
 
+![Slug mascot](/img/slug_mascot.svg)
+
 Welcome to **AI-Assisted Coding**, a practical guide to writing better software with AI tools.
 
 ## What is AI-Assisted Coding?

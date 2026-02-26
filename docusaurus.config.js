@@ -50,6 +50,10 @@ const config = {
       },
       navbar: {
         title: 'AI-Assisted Coding',
+        logo: {
+          alt: 'AI-Assisted Coding Logo',
+          src: 'img/logo.svg',
+        },
         items: [
           {
             type: 'docSidebar',

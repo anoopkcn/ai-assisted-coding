@@ -91,3 +91,10 @@ pre > code {
   --prism-background-color: hsl(220, 93%, 50%, 0.15);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.theme-doc-markdown img[alt="Slug mascot"] {
+  display: block;
+  margin: 0 auto;
+  width: min(400px, 100%);
+  height: auto;
+}
