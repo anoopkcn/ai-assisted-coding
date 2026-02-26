@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Worktrees
 
-Git worktrees let you have multiple working directories sharing the same repository. Each worktree has its own files, branch, and working state while sharing commit history and remotes. Therefore enables one to have **parallel, isolated sessions**.
+Git worktrees let you have multiple working directories sharing the same repository. Each worktree has its own files, branch, and working state while sharing commit history and remotes. This enables **parallel, isolated sessions**.
 
 ## When to use worktrees
 
@@ -29,7 +29,7 @@ git worktree remove ../feature-branch
 
 This works with any tool, not just Claude Code.
 
-## Claude code worktrees
+## Claude Code worktrees
 
 ```bash
 # Start Claude Code in a new worktree
@@ -62,4 +62,3 @@ isolation: worktree
 
 Analyze and optimize the target module for performance...
 ```
-

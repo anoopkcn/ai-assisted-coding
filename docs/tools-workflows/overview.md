@@ -6,6 +6,8 @@ sidebar_position: 1
 
 A quick look at the most popular AI coding assistants available.
 
+> Last reviewed: February 26, 2026. Tool names, links, and product capabilities can change quickly.
+
 ## API Platforms
 
 | Platform | Description |
@@ -39,4 +41,3 @@ A quick look at the most popular AI coding assistants available.
 | [**Claude (Anthropic)**](https://claude.ai/) | General-purpose AI assistant with strong coding, analysis, and reasoning capabilities |
 | [**ChatGPT (OpenAI)**](https://chatgpt.com/) | General-purpose AI assistant commonly used for code generation, debugging, and design help |
 | [**Gemini (Google)**](https://gemini.google.com/) | General-purpose AI assistant useful for coding support, explanations, and refactoring ideas |
-

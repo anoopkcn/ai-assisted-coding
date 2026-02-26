@@ -17,6 +17,14 @@ Each exercise follows a progressive structure:
 
 The exercise tasks emphasize **test-driven development**: you write tests first with AI help, then implement code to make them pass. This mirrors how experienced developers use AI tools in practice.
 
+## How to Track Progress
+
+For each task in an exercise, check:
+
+- **Time box** - expected duration so you know when to move on
+- **Success checkpoint** - the observable result that proves task completion
+- **Failure signals** - common signs that your prompt or implementation needs revision
+
 ## Prerequisites
 
 - **Python 3.10+** installed

@@ -10,7 +10,7 @@ Tokens are the fundamental unit that language models operate on. Everything you 
 
 A **token** is a chunk of text that the model's **tokenizer** has learned to treat as a single unit. In English prose, a token is roughly 4 characters or about three-quarters of a word.
 
-Common words like "the" or "function" are usually a single token. Less common words get split into multiple tokens. Code tokenizes differently from prose  variable names, operators, and whitespace all get their own treatment.
+Common words like "the" or "function" are usually a single token. Less common words get split into multiple tokens. Code tokenizes differently from prose: variable names, operators, and whitespace are treated differently by each tokenizer.
 
 Some examples to build intuition:
 

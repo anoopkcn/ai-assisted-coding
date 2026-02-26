@@ -44,3 +44,5 @@ AI-generated code needs the same scrutiny as human-written code — sometimes mo
 - [ ] Follows existing project conventions
 - [ ] Dependencies are appropriate and up to date
 - [ ] Edge cases are handled
+
+For broader operational safeguards, see [Safety and Risk Management](/best-practices/safety-and-risk).

@@ -28,7 +28,7 @@ Language models are **stateless** so they don't remember previous conversations 
 
 Here, the second request includes the original input and response *plus* the new follow-up message. The context window now holds 11 tokens (2 + 2 + 3 + 4). As the conversation grows longer, more of the context window is consumed.
 
-This is why long conversations can eventually hit the context limit i.e the model simply runs out of space to hold all the previous exchanges plus generate a new response.
+This is why long conversations can eventually hit the context limit, meaning the model runs out of space to hold previous exchanges plus a new response.
 
 ## What happens as the context window fills up
 As your conversation progresses and the context window approaches its limit, several factors change that can impact the quality and reliability of the model's responses. The following plot provides the claimed versus the effective context length of some models. As you can see, the effective context length is much smaller than the claimed one in all models studied.
@@ -46,7 +46,7 @@ Tools like Claude Code show you exactly how the context window is being used. Th
 - **Free space** - remaining capacity for new messages and responses
 <div style={{maxWidth: '600px', margin: '0 auto'}}>
     ![Claude Code context](./img/context_window_3.png)
-    <p><small>Source: Output of <code>/contex</code> command in Claude Code v2.1.52</small></p>
+    <p><small>Source: Output of <code>/context</code> command in Claude Code v2.1.52</small></p>
 </div>
 
 
@@ -54,7 +54,7 @@ When the context window fills up, the system must either compress older messages
 
 ### Autocompaction
 
-When the context window is nearly full, tools like Claude Code will **autocompact** the conversation(automatically summarizing or dropping older messages to free up space). This keeps the conversation going, but comes with trade-offs:
+When the context window is nearly full, tools like Claude Code may **autocompact** the conversation (automatically summarizing or dropping older messages to free up space). This keeps the conversation going, but comes with trade-offs:
 
 - **Lost detail** - specific code snippets, file paths, or exact instructions from earlier in the conversation may be compressed into vague summaries
 - **Broken references** - if you refer back to something discussed earlier, the model may no longer have access to the original content
@@ -84,6 +84,12 @@ Large contexts don't just risk information loss and ambiguity, they can reduce o
 - **Be explicit** when referencing earlier context - re-state key details rather than saying "like I mentioned before"
 - **Front-load important instructions** - system prompts and key constraints should be at the start, where they're less likely to be compacted
 - **Watch the context indicator** - when you're past 50-60% usage, consider whether continuing the session or starting a new one makes more sense
+
+### When this guidance may not apply
+
+- If your task requires long, immutable source material (for example policy bundles), starting a new session can lose useful continuity
+- Some tools use retrieval and persistent memory features that reduce, but do not eliminate, context pressure
+- For short one-step edits, context optimization has minimal practical impact
 
 ## Context window limit for popular models
 

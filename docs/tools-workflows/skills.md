@@ -2,9 +2,9 @@
 sidebar_position: 2
 ---
 
-# Skills (Slash Commands)
+# Skills (Commands)
 
-Skills are reusable instruction sets that extend what an AI assistant can do. You invoke them with `/skill-name` or the assistant loads them automatically when they match the current task.
+Skills are reusable instruction sets that extend what an AI assistant can do. You invoke them with `/skill-name` (in Claude Code), `$skill-name` (in Codex) or the assistant loads them automatically when they match the current task.
 
 ## Built-in vs custom skills
 
@@ -43,7 +43,7 @@ Then invoke it:
 | `description` | When to auto-load; also shown in `/` menu |
 | `argument-hint` | Autocomplete hint, e.g. `[file-path]` |
 | `user-invocable` | `true` = appears in `/` menu; `false` = only auto-loaded |
-| `allowed-tools` | Tools available without permission prompts |
+| `allowed-tools` / `tools` | Tool access control field (exact key can vary by feature/version) |
 | `model` | `sonnet`, `opus`, `haiku`, or `inherit` |
 | `context` | `default` (inline) or `fork` (isolated subagent) |
 

@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Temperature and Sampling
 
-Language models don't retrieve pre-written answers. They **generate** text one token at a time, choosing each token based on a probability distribution. The parameters that control how the model makes these choices(temperature, top-p, and top-k) directly affect the quality and consistency of the code you get back.
+Language models don't retrieve pre-written answers. They **generate** text one token at a time, choosing each token based on a probability distribution. The parameters that control how the model makes these choices (temperature, top-p, and top-k) directly affect the quality and consistency of the code you get back.
 
 ## How models generate text
 
@@ -40,7 +40,7 @@ For coding tasks, lower temperatures almost always produce better results. You w
 | Brainstorming | 0.7–1.0 | You want diverse ideas |
 | Creative writing | 0.8–1.0 | Variety and surprise are the point |
 
-<p><small>The temperature recommendation is based on author's own experience. The literature(https://arxiv.org/pdf/2402.05201) broadly supports this view.</small></p>
+<p><small>The temperature recommendations are based on the author's experience. Research such as <a href="https://arxiv.org/pdf/2402.05201">this study</a> broadly supports this direction.</small></p>
 
 ## Top-p (nucleus sampling)
 
@@ -90,7 +90,7 @@ const response = await openai.chat.completions.create({
 });
 ```
 
-Note that `max_tokens` (or `max_output_tokens`) controls the maximum length of the response, not the randomness. It's separate from the sampling parameters but equally important therefore setting it too low can result in truncated code.
+Note that `max_tokens` (or `max_output_tokens`) controls response length, not randomness. It's separate from sampling parameters. Setting it too low can truncate code.
 
 ## Practical tips
 
@@ -99,3 +99,9 @@ Note that `max_tokens` (or `max_output_tokens`) controls the maximum length of t
 - **Most coding tools handle this for you** - Claude Code, Cursor, and Copilot all set appropriate temperatures internally. You only need to think about this when using the API directly
 - **Use temperature 0 for reproducibility** - if you're building automated pipelines or evaluations, temperature 0 ensures you get the same output for the same input
 - **Don't combine temperature and top-p adjustments** - pick one knob to turn. Adjusting both at once makes it hard to reason about the behavior
+
+## When this guidance may not apply
+
+- Some providers ignore or constrain sampling parameters for specific model families or modes
+- For brainstorming and alternative designs, higher temperature can be more useful than strict determinism
+- In production pipelines that need consistency and diversity, you may intentionally use controlled randomness with post-validation

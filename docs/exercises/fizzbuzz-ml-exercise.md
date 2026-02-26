@@ -63,11 +63,25 @@ After completing this exercise, you will have learned:
 - Running multi-step agentic workflows
 - Configuring project context (`CLAUDE.md` and/or `AGENTS.md`) to guide AI behavior
 
+## Estimated Time and Checkpoints
+
+| Task | Suggested Time | Success checkpoint |
+|------|----------------|--------------------|
+| Task 0: Environment setup | 10-20 min | `uv run pytest` executes in the project environment |
+| Task 1: Planning | 10-15 min | You have a written model/data plan before coding |
+| Task 2: Tests first | 20-30 min | Tests exist and fail for the right reason (missing implementation) |
+| Task 3: Feature engineering | 20-30 min | Encoding/dataset tests pass |
+| Task 4: Model + training | 30-45 min | Model shape and training tests pass |
+| Task 5: Evaluation | 20-30 min | Evaluation report produced with accuracy + per-class metrics |
+| Task 6: Agentic workflow | 30-60 min | Agent performs read-edit-test cycles with reviewable commits |
+
 ---
 
 ## Task 0: Set Up the Project Environment
 
 **Objective:** Create a Python environment using `uv`, initialize a git repo, and write a `CLAUDE.md` file.
+
+**Success checkpoint:** `uv run pytest` runs in the managed environment (even if no tests yet) and `CLAUDE.md` documents runtime commands.
 
 **Steps:**
 1. Install `uv` if not already installed
@@ -122,6 +136,8 @@ Never use bare `python` or `pip` commands.
 
 **Objective:** Use AI to understand the FizzBuzz ML problem and plan the approach. Do not write implementation code yet.
 
+**Success checkpoint:** You can explain feature encoding, label mapping, architecture, and train/test split before writing code.
+
 **Prompt guidance — ask the AI to plan:**
 
 ```text
@@ -166,6 +182,8 @@ Too vague — skips the planning phase entirely and you lose the opportunity to 
 ## Task 2: Write Tests First (TDD)
 
 **Objective:** Before implementing any ML code, use AI to write tests that define what "done" looks like.
+
+**Success checkpoint:** Tests are runnable and fail because implementation is missing, not because tests are broken.
 
 **Prompt guidance:**
 
@@ -278,6 +296,8 @@ def test_predict_returns_valid_string():
 
 **Objective:** Use AI to implement `encode_number` and `prepare_dataset` so the first group of tests pass.
 
+**Success checkpoint:** All encoding and dataset tests pass with no changes to test intent.
+
 **Prompt guidance:**
 
 ```text
@@ -356,6 +376,8 @@ def prepare_dataset(numbers, n_bits=N_BITS):
 ## Task 4: Build and Train the PyTorch Model
 
 **Objective:** Use AI to implement `FizzBuzzNet` and a training loop. Make the model tests pass, then train to a reasonable accuracy.
+
+**Success checkpoint:** Model interface tests pass and training measurably reduces loss.
 
 **Prompt guidance:**
 
@@ -477,6 +499,8 @@ def test_model_trains_and_improves():
 
 **Objective:** Use AI to add proper evaluation: accuracy per class, confusion matrix, and comparison with the ground truth `fizzbuzz()` function.
 
+**Success checkpoint:** `evaluate()` returns overall accuracy, per-class metrics, and confusion data on held-out numbers.
+
 **Prompt guidance:**
 
 ```text
@@ -567,6 +591,8 @@ if __name__ == "__main__":
 
 **Objective:** Use an AI agent in autonomous mode to perform a multi-step improvement. Commit all current work first.
 
+**Success checkpoint:** The agent reads files before edits, runs tests after changes, and leaves a clear commit trail.
+
 **Prerequisites:** A tool with agentic capabilities (Claude Code, Cursor agent mode, or similar).
 
 **Prompt guidance — give the agent a high-level goal:**
@@ -601,7 +627,7 @@ Create a custom subagent for ML code review (see [Subagents](/tools-workflows/su
 ---
 name: ml-reviewer
 description: Reviews ML code for best practices
-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob
 model: sonnet
 ---
 Review the ML script for:

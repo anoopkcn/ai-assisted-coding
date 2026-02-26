@@ -4,7 +4,9 @@ sidebar_position: 4
 
 # Hooks
 
-Hooks are shell commands that execute automatically at specific points in Claude Code's lifecycle. Unlike the AI's decisions (which can vary), hooks are **deterministic** they always run when their trigger condition is met. A well constructed hook can save you precious tokens :D
+Hooks are shell commands that execute automatically at specific points in Claude Code's lifecycle. Unlike model decisions (which can vary), **hooks are deterministic:** they run when their trigger condition is met. Well-designed hooks can save context and reduce repeated manual steps.
+
+> Last reviewed: February 26, 2026. Event names and schema details may change across versions.
 
 ## Common use cases
 

@@ -37,7 +37,7 @@ Create a custom subagent by adding a `SKILL.md` file (see [Skills](skills.md) fo
 ---
 name: code-reviewer
 description: Reviews code for quality and best practices
-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob
 model: sonnet
 maxTurns: 10
 ---
@@ -52,6 +52,8 @@ Organize feedback by priority: Critical → Warning → Suggestion
 ```
 
 Subagents can be scoped to a project (`.claude/agents/`) or to all your projects (`~/.claude/agents/`).
+
+If your tool version uses `tools` instead of `allowed-tools`, use the key your tool expects.
 
 ## Comparison with other tools
 

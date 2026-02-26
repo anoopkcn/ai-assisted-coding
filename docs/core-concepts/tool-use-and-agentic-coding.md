@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Tool Use and Agentic Coding
 
-Language models can generate text, but they can't read files, run tests, or execute commands on their own. **Tool use** is the mechanism that bridges this gap, it allows a model to request that external code be run on its behalf. When tool use is combined with a loop that lets the model act, observe, and act again, you get **agentic coding**: an AI that can autonomously complete multi-step software engineering tasks.
+Language models can generate text, but they can't read files, run tests, or execute commands on their own. **Tool use** is the mechanism that bridges this gap: it allows a model to request that external code be run on its behalf. When tool use is combined with a loop that lets the model act, observe, and act again, you get **agentic coding**: an AI that can autonomously complete multi-step software engineering tasks.
 
 ## What is tool use?
 
@@ -85,3 +85,9 @@ Different coding tools take different approaches to tool use and agentic behavio
 - **Watch context usage** - agentic sessions fill the context window faster than normal conversations. If you see the model losing track of earlier context, start a new session
 - **Review output rigorously** - autonomous doesn't mean infallible. Review diffs, run tests, and verify that changes make sense before committing them
 - **Start small, expand scope** - begin with focused, well-defined tasks before asking for large refactors. This helps you calibrate how well the tool handles your specific codebase
+
+## When this guidance may not apply
+
+- In restricted enterprise environments, tool use may be disabled or heavily filtered
+- Some assistants support partial autonomy only (for example read-only or patch-only flows)
+- For tiny edits, manual changes can be faster than spinning up a full agentic loop

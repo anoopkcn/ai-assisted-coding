@@ -19,11 +19,28 @@ AI-assisted coding uses large language models (LLMs) to help you write, review, 
 - **[Best Practices](/category/best-practices)** Writing reliable software with AI assistance
 - **[Exercises](/category/exercises)** Hands-on practice applying AI-assisted coding techniques to a dummy problem
 
+## Outcomes
+
+After working through this documentation, you should be able to:
+
+- Explain how tokens, context windows, and system instructions affect model behavior
+- Prompt coding agents with clear constraints and verifiable done criteria
+- Run safer AI-assisted workflows with checkpoints, tests, and code review
+- Choose tools and execution modes based on the task, risk, and level of autonomy needed
+
 ## Who This Is For
 
 - Anyone curious about the practical side of AI-assisted development
 - Developers looking to integrate AI tools into their workflow
 - Teams evaluating AI coding assistants
+
+## Suggested Learning Paths
+
+| Audience | Start Here | Then Read |
+|----------|------------|-----------|
+| New to AI coding tools | [Core Concepts](/category/core-concepts) | [Prompt Engineering](/category/prompt-engineering) -> [Best Practices](/category/best-practices) |
+| Working developers adopting tools now | [Tools & Workflows](/category/tools--workflows) | [Best Practices](/category/best-practices) -> [Exercises](/category/exercises) |
+| Team leads and enablement owners | [Best Practices](/category/best-practices) | [Tools & Workflows](/category/tools--workflows) -> [Core Concepts](/category/core-concepts) |
 
 ## Getting Started
 

@@ -39,6 +39,8 @@ AI coding tools are not always the right choice:
 - **Domain-specific logic** — The AI may not understand your business rules
 - **When you need to learn** — Using AI to skip understanding leads to fragile codebases
 
+For risk controls, see [Safety and Risk Management](/best-practices/safety-and-risk).
+
 ## Pair with AI, Don't Defer to It
 
 Think of AI as a junior developer with broad knowledge but no judgment. You provide the direction, review the output, and make the final call.
