@@ -5,6 +5,9 @@ sidebar_position: 3
 import ModelPricingTable from '@site/src/components/ModelPricingTable';
 
 # Context Window
+<div style={{maxWidth: '200px', margin: '0 auto'}}>
+![mascot measuring the temperature](./img/slug_cleaning.png)
+</div>
 
 The **context window** is the total amount of text (measured in [tokens](./tokens-and-tokenization.md)) that a language model can process in a single request. It includes everything: your input, the model's previous responses, system instructions, and any other context. Think of it as the model's working memory, everything it can "see" when generating a response.
 

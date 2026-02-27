@@ -92,9 +92,9 @@ pre > code {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.theme-doc-markdown img[alt="Slug mascot"] {
+.theme-doc-markdown img[alt="slug_mascot"] {
   display: block;
   margin: 0 auto;
-  width: min(400px, 100%);
+  width: min(500px, 100%);
   height: auto;
 }

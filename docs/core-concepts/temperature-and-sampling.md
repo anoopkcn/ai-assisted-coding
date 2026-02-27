@@ -3,10 +3,10 @@ sidebar_position: 2
 ---
 
 # Temperature and Sampling
-<div style={{maxWidth: '600px', margin: '0 auto'}}>
-![A single input-output exchange](./img/slug_temperature.png)
-</div>
 
+<div style={{maxWidth: '250px', margin: '0 auto'}}>
+![mascot measuring the temperature](./img/slug_thermo.png)
+</div>
 Language models don't retrieve pre-written answers. They **generate** text one token at a time, choosing each token based on a probability distribution. The parameters that control how the model makes these choices (temperature, top-p, and top-k) directly affect the quality and consistency of the code you get back.
 
 ## How models generate text

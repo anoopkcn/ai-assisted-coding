@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # System Prompts and Roles
 
-<div style={{maxWidth: '600px', margin: '0 auto'}}>
+<div style={{maxWidth: '400px', margin: '0 auto'}}>
 ![A single input-output exchange](./img/slug_system_prompt.png)
 </div>
 
