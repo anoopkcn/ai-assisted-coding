@@ -65,7 +65,7 @@ const config = {
         title: 'AI-Assisted Coding',
         logo: {
           alt: 'AI-Assisted Coding Logo',
-          src: 'img/logo.svg',
+          src: 'img/slug.png',
         },
         items: [
           {

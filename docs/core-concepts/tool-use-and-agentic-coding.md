@@ -3,6 +3,9 @@ sidebar_position: 5
 ---
 
 # Tool Use and Agentic Coding
+<div style={{maxWidth: '600px', margin: '0 auto'}}>
+![A single input-output exchange](./img/slug_tools.png)
+</div>
 
 Language models can generate text, but they can't read files, run tests, or execute commands on their own. **Tool use** is the mechanism that bridges this gap: it allows a model to request that external code be run on its behalf. When tool use is combined with a loop that lets the model act, observe, and act again, you get **agentic coding**: an AI that can autonomously complete multi-step software engineering tasks.
 

@@ -4,6 +4,9 @@ sidebar_position: 1
 
 # Tokens and Tokenization
 
+<div style={{maxWidth: '600px', margin: '0 auto'}}>
+![A single input-output exchange](./img/slug_tokenization.png)
+</div>
 Tokens are the fundamental unit that language models operate on. Everything you send to a model and everything it sends back is measured in tokens.
 
 ## What is a token?

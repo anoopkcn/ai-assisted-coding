@@ -7,9 +7,9 @@ slug: /
 
 ![Slug mascot](/img/slug_mascot.svg)
 
-Welcome to **AI-Assisted Coding**, a practical guide to writing better software with AI tools.
+<!-- Welcome to **AI-Assisted Coding**, a practical guide to writing code with AI. -->
 
-## What is AI-Assisted Coding?
+<!-- ## What is AI-Assisted Coding? -->
 
 AI-assisted coding uses large language models (LLMs) to help you write, review, debug, and refactor code.
 
