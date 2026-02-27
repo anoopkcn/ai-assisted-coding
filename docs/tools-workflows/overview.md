@@ -19,6 +19,14 @@ A quick look at the most popular AI coding assistants available.
 
 <p><small>Not all models hosted by Blablador are trained by [JSC](https://www.fz-juelich.de/en/jsc), you can check the model details to look for the ones trained by [JSC AI team](https://sdlaml.pages.jsc.fz-juelich.de/ai/)</small></p>
 
+Using API for coding purposes is okay however coding oriented models and tools more suited for this job since they offer:
+
+- A strong default instruction scaffold (coding-focused behavior).
+- Tool loop: run shell commands, read/write files, test, retry.
+- Repo/context loading (files, diffs, diagnostics) before each call.
+- Safety controls (sandboxing, approvals, blocked commands).
+- Structured output expectations (patches, commit-ready edits).
+
 ## CLI Tools
 
 | Tool | Description |
