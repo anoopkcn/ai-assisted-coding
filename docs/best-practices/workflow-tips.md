@@ -13,13 +13,12 @@ Before prompting an AI tool, know what you want:
 - What does "done" look like?
 - What constraints exist?
 
-## Use Version Control
+## Use [Version Control](https://git-scm.com/video/what-is-version-control)
 
 Always commit before starting an AI-assisted task. This gives you a clean rollback point if the generated code doesn't work out.
 
-```bash
-git add -A && git commit -m "checkpoint before AI refactor"
-```
+- [Git Cheat Sheet](https://git-scm.com/cheat-sheet)
+- [Make use of Git worktree](https://git-scm.com/docs/git-worktree)
 
 ## Incremental Changes
 

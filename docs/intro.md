@@ -4,8 +4,10 @@ slug: /
 ---
 
 # Introduction
-<!-- DO NOT change the alt text it is used in the css -->
-![slug_mascot](/img/slug_mascot.svg)
+<div style={{maxWidth: '500px', margin: '0 auto'}}>
+![mascot](/img/slug_mascot.svg)
+</div>
+
 
 AI-assisted coding uses large language models (LLMs) to help you write, review, debug, and refactor code.
 

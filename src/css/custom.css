@@ -96,10 +96,3 @@ pre > code {
   position: relative;
   overflow: visible;
 }
-
-.theme-doc-markdown img[alt="slug_mascot"] {
-  display: block;
-  margin: 0 auto;
-  width: min(500px, 100%);
-  height: auto;
-}
