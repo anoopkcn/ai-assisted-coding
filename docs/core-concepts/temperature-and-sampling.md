@@ -2,11 +2,12 @@
 sidebar_position: 2
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # Temperature and Sampling
 
-<div style={{maxWidth: '250px', margin: '0 auto'}}>
-![mascot measuring the temperature](./img/slug_thermo.png)
-</div>
+<Mascot src={require('./img/slug_thermo.png').default} />
+
 Language models don't retrieve pre-written answers. They **generate** text one token at a time, choosing each token based on a probability distribution. The parameters that control how the model makes these choices (temperature, top-p, and top-k) directly affect the quality and consistency of the code you get back.
 
 ## How models generate text

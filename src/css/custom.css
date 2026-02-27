@@ -92,6 +92,11 @@ pre > code {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.theme-doc-markdown {
+  position: relative;
+  overflow: visible;
+}
+
 .theme-doc-markdown img[alt="slug_mascot"] {
   display: block;
   margin: 0 auto;

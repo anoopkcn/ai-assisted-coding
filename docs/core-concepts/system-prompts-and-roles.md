@@ -2,11 +2,11 @@
 sidebar_position: 4
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # System Prompts and Roles
 
-<div style={{maxWidth: '400px', margin: '0 auto'}}>
-![A single input-output exchange](./img/slug_system_prompt.png)
-</div>
+<Mascot src={require('./img/slug_system_prompt.png').default} />
 
 Every message you send to a language model has a **role** attached to it. These roles are system, user, and assistant. These roles tell the model how to interpret each piece of the conversation. Understanding this structure is essential for getting reliable results from AI coding tools, and it's the foundation of how tools like Claude Code and Cursor work behind the scenes.
 

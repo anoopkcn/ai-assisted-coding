@@ -2,11 +2,12 @@
 sidebar_position: 1
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # Tokens and Tokenization
 
-<div style={{maxWidth: '250px', margin: '0 auto'}}>
-![Mascot sorting tokens](./img/slug_token.png)
-</div>
+<Mascot src={require('./img/slug_token.png').default} />
+
 Tokens are the fundamental unit that language models operate on. Everything you send to a model and everything it sends back is measured in tokens.
 
 ## What is a token?

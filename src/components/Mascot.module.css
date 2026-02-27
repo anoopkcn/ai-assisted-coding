@@ -1,0 +1,28 @@
+.mascot {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mascot img {
+  width: 100%;
+  height: auto;
+}
+
+.top-right {
+  top: 0;
+  right: -2rem;
+  transform: translateX(50%);
+}
+
+.top-left {
+  top: 0;
+  left: -2rem;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 997px) {
+  .mascot {
+    display: none;
+  }
+}
