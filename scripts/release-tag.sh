@@ -19,8 +19,8 @@ if [[ "$CURRENT_BRANCH" != "main" ]]; then
   exit 1
 fi
 
-if [[ -n "$(git status --porcelain)" ]]; then
-  echo "Error: working tree is not clean. Commit or stash your changes first."
+if ! git diff --quiet || ! git diff --cached --quiet; then
+  echo "Error: tracked changes detected. Commit or stash your tracked changes first."
   exit 1
 fi
 
