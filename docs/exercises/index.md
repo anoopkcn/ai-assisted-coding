@@ -1,8 +1,10 @@
 ---
 sidebar_position: 1
 ---
+import Mascot from '@site/src/components/Mascot';
 
 # Exercises
+<Mascot src={require('./img/slug_homework.png').default} />
 
 The exercise is designed to practice specific techniques from the documentation sections. You'll alternate between writing prompts, reviewing AI output, running tests, and committing your work. Just like a real development workflow.
 

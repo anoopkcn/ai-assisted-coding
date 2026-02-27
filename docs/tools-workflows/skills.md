@@ -1,8 +1,10 @@
 ---
 sidebar_position: 2
 ---
+import Mascot from '@site/src/components/Mascot';
 
 # Skills (Commands)
+<Mascot src={require('./img/slug_juggle.png').default} />
 
 Skills are reusable instruction sets that extend what an AI assistant can do. You invoke them with `/skill-name` (in Claude Code), `$skill-name` (in Codex) or the assistant loads them automatically when they match the current task.
 

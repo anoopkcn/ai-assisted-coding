@@ -1,8 +1,10 @@
 ---
 sidebar_position: 2
 ---
+import Mascot from '@site/src/components/Mascot';
 
 # FizzBuzz ML exercise
+<Mascot src={require('./img/slug_lego.png').default} />
 
 Build a supervised machine learning algorithm that learns to predict FizzBuzz from integers.  Use an AI agent to help you every step of the way.
 
