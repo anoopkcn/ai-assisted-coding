@@ -2,7 +2,11 @@
 sidebar_position: 2
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # Advanced Techniques
+
+<Mascot src={require('./img/slug_plane.png').default} />
 
 Go beyond basic prompts to get more reliable and higher-quality results.
 

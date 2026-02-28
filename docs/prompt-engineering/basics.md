@@ -2,7 +2,11 @@
 sidebar_position: 1
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # Prompt Engineering Basics
+
+<Mascot src={require('./img/slug_lab.png').default} />
 
 The quality of your prompt directly affects the quality of AI-generated code.
 
