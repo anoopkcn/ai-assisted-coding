@@ -2,7 +2,11 @@
 sidebar_position: 3
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # MCP (Model Context Protocol)
+
+<Mascot src={require('./img/slug_search.png').default} />
 
 The **Model Context Protocol (MCP)** is an open standard for connecting language models to external tools and data sources. Think of it like USB for AI tools, a standardized way to plug in new capabilities without building custom integrations for each one.
 

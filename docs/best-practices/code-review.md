@@ -2,7 +2,10 @@
 sidebar_position: 1
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # Reviewing AI-Generated Code
+<Mascot src={require('./img/slug_debug.png').default} />
 
 AI-generated code needs the same scrutiny as human-written code — sometimes more.
 

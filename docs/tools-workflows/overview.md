@@ -2,7 +2,11 @@
 sidebar_position: 1
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # AI Coding Tools Overview
+
+<Mascot src={require('./img/slug_clipboard.png').default} />
 
 A quick look at the most popular AI coding assistants available.
 

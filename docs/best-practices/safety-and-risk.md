@@ -1,8 +1,10 @@
 ---
 sidebar_position: 3
 ---
+import Mascot from '@site/src/components/Mascot';
 
 # Safety and Risk Management
+<Mascot src={require('./img/slug_stop.png').default} />
 
 AI coding tools can accelerate delivery, but they also introduce failure modes that are easy to miss during fast iteration. Use this page as a practical risk checklist before merging AI-assisted changes.
 

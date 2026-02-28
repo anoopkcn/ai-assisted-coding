@@ -2,7 +2,11 @@
 sidebar_position: 6
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # Worktrees
+
+<Mascot src={require('./img/slug_trees.png').default} />
 
 Git worktrees let you have multiple working directories sharing the same repository. Each worktree has its own files, branch, and working state while sharing commit history and remotes. This enables **parallel, isolated sessions**.
 

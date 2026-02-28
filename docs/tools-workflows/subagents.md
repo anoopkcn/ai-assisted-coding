@@ -2,7 +2,11 @@
 sidebar_position: 5
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # Subagents
+
+<Mascot src={require('./img/slug_subagents.png').default} />
 
 Subagents are specialized AI assistants that run in isolated contexts with their own conversation history and restricted tool access. Instead of handling everything in a single conversation, the main agent delegates focused tasks to subagents that work independently and return results.
 

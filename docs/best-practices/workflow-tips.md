@@ -2,7 +2,10 @@
 sidebar_position: 2
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # Workflow Tips
+<Mascot src={require('./img/slug_thinking.png').default} />
 
 Practical advice for integrating AI tools into your daily development workflow.
 

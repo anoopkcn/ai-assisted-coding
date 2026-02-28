@@ -2,7 +2,11 @@
 sidebar_position: 4
 ---
 
+import Mascot from '@site/src/components/Mascot';
+
 # Hooks
+
+<Mascot src={require('./img/slug_hooks.png').default} />
 
 Hooks are shell commands that execute automatically at specific points in Claude Code's lifecycle. Unlike model decisions (which can vary), **hooks are deterministic:** they run when their trigger condition is met. Well-designed hooks can save context and reduce repeated manual steps.
 
