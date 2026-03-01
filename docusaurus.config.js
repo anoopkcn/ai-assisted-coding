@@ -75,6 +75,7 @@ const config = {
             label: 'Docs',
           },
           {to: '/notice', label: 'Notice', position: 'left'},
+          {to: '/contact', label: 'Contact', position: 'left'},
           {
             type: 'docsVersionDropdown',
             position: 'right',

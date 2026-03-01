@@ -96,3 +96,113 @@ pre > code {
   position: relative;
   overflow: visible;
 }
+
+.contact-page {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+.contact-lead {
+  margin: 0;
+  font-size: 1.05rem;
+  text-align: center;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.contact-button {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
+  background: transparent;
+  color: var(--ifm-color-primary);
+  padding: 0.45rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.contact-button:hover {
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+  background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+  border-color: var(--ifm-color-primary);
+}
+
+.contact-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 520px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-card {
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 15%, transparent);
+  background: var(--ifm-background-surface-color);
+}
+
+.contact-card h2,
+.contact-note h2 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.contact-card p,
+.contact-note p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.contact-card a.contact-text-link {
+  display: inline-flex;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.contact-note {
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 15%, transparent);
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .contact-button {
+  color: var(--ifm-color-primary-light);
+  border-color: color-mix(in srgb, var(--ifm-color-primary-light) 35%, transparent);
+}
+
+[data-theme='dark'] .contact-button:hover {
+  color: var(--ifm-color-primary-light);
+  background: color-mix(in srgb, var(--ifm-color-primary) 12%, transparent);
+  border-color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .contact-card,
+[data-theme='dark'] .contact-note {
+  border-color: color-mix(in srgb, var(--ifm-color-primary) 25%, transparent);
+  background: var(--ifm-background-surface-color);
+}
