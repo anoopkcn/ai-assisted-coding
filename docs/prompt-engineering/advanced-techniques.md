@@ -16,8 +16,8 @@ Point the AI to existing patterns in your codebase:
 
 ```
 Look at how authentication middleware is implemented in
-src/middleware/auth.js and create a similar middleware
-for rate limiting.
+app/middleware/auth.py and create a similar middleware
+in app/middleware/rate_limit.py that limits requests per IP.
 ```
 
 ## Ask for Explanations
@@ -111,11 +111,11 @@ only, malformed rows, and unicode content.
 When a change spans multiple files, describe the full scope:
 
 ```
-Add a "last_login" timestamp to the User model. This will need:
-- A database migration
-- Updated model definition
-- Changes to the login endpoint to record the timestamp
-- Updated API response to include the field
+Add a "last_login" timestamp to the User SQLAlchemy model. This will need:
+- An Alembic migration
+- Updated model definition in app/models/user.py
+- Changes to the login route handler to record the timestamp
+- Updated Pydantic response schema to include the field
 ```
 
 ## Ask for Self-Checks Before Final Output

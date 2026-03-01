@@ -60,7 +60,16 @@ In practice, you rarely need to adjust both temperature and top-p. For coding ta
 
 Top-k is less commonly used than temperature or top-p, and most coding-focused tools don't expose it. You can safely ignore it for most use cases.
 
-## Putting it together: API parameters
+## Practical tips
+
+- **Default to temperature 0 for code** - consistency and correctness matter more than creativity for almost all coding tasks
+- **Prompt quality matters more than temperature** - a well-written prompt at temperature 0 will outperform a vague prompt at any temperature. Invest your time in better prompts, not tuning sampling parameters
+- **Most coding tools handle this for you** - Claude Code, Cursor, and Copilot all set appropriate temperatures internally. You only need to think about this when using the API directly
+- **Use temperature 0 for higher reproducibility** - if you're building automated pipelines or evaluations, this generally reduces output variance for the same input
+- **Don't combine temperature and top-p adjustments** - pick one knob to turn. Adjusting both at once makes it hard to reason about the behavior
+
+<details>
+<summary>API parameters </summary>
 
 When you call a model API directly, you control these parameters in your request. Here's what a typical coding-focused request looks like:
 
@@ -95,14 +104,7 @@ const response = await openai.chat.completions.create({
 ```
 
 Note that `max_tokens` (or `max_output_tokens`) controls response length, not randomness. It's separate from sampling parameters. Setting it too low can truncate code.
-
-## Practical tips
-
-- **Default to temperature 0 for code** - consistency and correctness matter more than creativity for almost all coding tasks
-- **Prompt quality matters more than temperature** - a well-written prompt at temperature 0 will outperform a vague prompt at any temperature. Invest your time in better prompts, not tuning sampling parameters
-- **Most coding tools handle this for you** - Claude Code, Cursor, and Copilot all set appropriate temperatures internally. You only need to think about this when using the API directly
-- **Use temperature 0 for higher reproducibility** - if you're building automated pipelines or evaluations, this generally reduces output variance for the same input
-- **Don't combine temperature and top-p adjustments** - pick one knob to turn. Adjusting both at once makes it hard to reason about the behavior
+</details>
 
 ## When this guidance may not apply
 
