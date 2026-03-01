@@ -40,12 +40,12 @@ claude --worktree feature-auth
 claude --worktree
 ```
 
-This creates a directory at `.claude/worktrees/<name>/` with a new branch `worktree-<name>`, giving you a fully isolated copy of the repository.
+Claude Code can create an isolated worktree session for you. Exact directory naming and branch naming conventions can vary by version, so verify with your installed CLI output.
 
 ### Cleanup behavior
 
-- **No changes made** - worktree and branch are removed automatically on exit
-- **Changes exist** - Claude prompts you to keep (preserves directory and branch) or remove (discards everything)
+- **No changes made** - tool-managed cleanup may remove temporary worktree state automatically
+- **Changes exist** - you are typically prompted to keep or remove the worktree state
 
 ### Worktrees in subagents
 
@@ -60,3 +60,5 @@ isolation: worktree
 
 Analyze and optimize the target module for performance...
 ```
+
+<p><small>Source: <a href="https://docs.anthropic.com/en/docs/claude-code/common-workflows#use-git-worktrees">Anthropic Claude Code worktree workflows</a></small></p>

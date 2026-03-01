@@ -28,6 +28,9 @@ Hooks are shell commands that execute automatically at specific points in Claude
 | `PostToolUse` | After a tool succeeds | Auto-format edited files |
 | `Notification` | Claude needs attention | Desktop notification |
 | `Stop` | Claude finishes responding | Verify task completion |
+| `SubagentStop` | A subagent completes | Post-process subagent output |
+| `PreCompact` | Before context compaction | Preserve key context before summarization |
+| `SessionEnd` | Session exits/ends | Cleanup and export logs |
 | `SessionStart` | Session begins/resumes | Re-inject context |
 | `UserPromptSubmit` | Before processing a prompt | Validate input |
 
@@ -110,3 +113,5 @@ The `matcher` field filters which tool or event triggers the hook:
 - `"Bash"` — matches only Bash tool calls
 - `"mcp__github__.*"` — matches any GitHub MCP tool (regex)
 - `""` (empty) — matches everything
+
+<p><small>Source: <a href="https://docs.anthropic.com/en/docs/claude-code/hooks-reference">Anthropic Claude Code hooks reference</a></small></p>

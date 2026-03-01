@@ -27,7 +27,7 @@ The exact tokenization depends on which model you're using. Claude, GPT, and Gem
 
 ## How tokenization works
 
-Most modern language models use a method called **[Byte Pair Encoding (BPE)](https://en.wikipedia.org/wiki/Byte-pair_encoding)** to build their tokenizer. During training, BPE starts with individual characters and repeatedly merges the most frequently occurring pairs into new tokens. The result is a vocabulary of subword units, common words stay whole, while rare words get split into pieces.
+Many modern language models use subword tokenization methods such as **BPE** or **SentencePiece/Unigram** variants. During tokenizer training, frequent character or subword patterns are merged into reusable token units, so common words often stay whole while rarer strings split into smaller pieces.
 
 This is why you'll sometimes see strange splits. A tokenizer trained mostly on English text will handle `function` as one token but might split a variable name like `getUserAccountBalance` into several pieces (`get`, `User`, `Account`, `Balance`). Code-specialized tokenizers are trained on more source code, so they handle programming patterns more efficiently.
 
@@ -35,7 +35,7 @@ You don't need to memorize how any specific tokenizer works. The key takeaway is
 
 ## Why tokens matter for cost
 
-API pricing is measured in tokens. You pay separately for **input tokens** (what you send to the model) and **output tokens** (what the model generates back). Output tokens are typically more expensive, often 3–5x the cost of input tokens.
+API pricing is measured in tokens. You pay separately for **input tokens** (what you send to the model) and **output tokens** (what the model generates back). For many current flagship model APIs, output tokens cost more than input tokens (often several times higher), but the exact ratio varies by provider and model tier.
 
 A practical example: if you send a 200-line file (~4,000 characters) to Claude Sonnet for review, that's roughly 1,000 input tokens. If the model responds with a detailed review of about 800 words, that's roughly another 1,000 output tokens. At typical pricing, the output costs significantly more than the input.
 
@@ -63,3 +63,5 @@ This means that even with large context windows, you can fill them up faster tha
 - **Code comments and whitespace count** - heavily commented code or code with excessive blank lines uses more tokens than you might expect
 - **Check token counts when cost matters** - most API dashboards show token usage per request, and tools like Claude Code show context window consumption in real time
 - **Different languages tokenize differently** - verbose languages like Java tend to use more tokens per line than concise ones like Python
+
+<p><small>Sources: <a href="https://platform.openai.com/tokenizer">OpenAI tokenizer reference</a>, <a href="https://github.com/google/sentencepiece">SentencePiece</a>, <a href="https://platform.openai.com/pricing">OpenAI pricing</a>, <a href="https://www.anthropic.com/pricing">Anthropic pricing</a></small></p>

@@ -29,7 +29,7 @@ The model sees **all** of these messages at once, it doesn't process them one at
 
 ## System prompts
 
-The **system prompt** is a special message that sets the model's behavior for the entire conversation. It gets elevated attention from the model i.e instructions in the system prompt are weighted more heavily than the same instructions placed in a user message.
+The **system prompt** is a special message that sets the model's behavior for the entire conversation. In most tool and API setups, system-level instructions are treated as higher-priority policy than ordinary user messages.
 
 Every AI coding tool uses a system prompt, whether you see it or not. When you open Claude Code, it injects a system prompt that tells the model to behave like a coding assistant, what tools it has access to, and how to format its responses.
 
@@ -109,3 +109,5 @@ response = client.messages.create(
 - **Check system prompt placement when the model ignores instructions** - if the model isn't following a rule, make sure the instruction is in the system prompt (not buried in a user message from 20 turns ago). System prompt instructions persist; user message instructions can get lost to [autocompaction](./context-window.md#autocompaction)
 - **Don't duplicate tool-injected context** - if your coding tool already injects project context via CLAUDE.md, don't also paste the same information into your prompts
 - **Use the right role for the job** - persistent rules go in the system prompt; task-specific instructions go in user messages. Mixing these up leads to unpredictable behavior
+
+<p><small>Sources: <a href="https://platform.openai.com/docs/guides/text#message-roles-and-instruction-following">OpenAI docs on roles and instruction hierarchy</a>, <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts">Anthropic system prompts guidance</a></small></p>

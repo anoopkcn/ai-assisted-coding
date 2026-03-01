@@ -95,3 +95,5 @@ Different coding tools take different approaches to tool use and agentic behavio
 - In restricted enterprise environments, tool use may be disabled or heavily filtered
 - Some assistants support partial autonomy only (for example read-only or patch-only flows)
 - For tiny edits, manual changes can be faster than spinning up a full agentic loop
+
+<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/overview">Anthropic Claude Code overview</a>, <a href="https://www.cursor.com/features">Cursor features</a>, <a href="https://docs.github.com/en/copilot">GitHub Copilot documentation</a>, <a href="https://platform.openai.com/docs/guides/function-calling">OpenAI function calling</a></small></p>

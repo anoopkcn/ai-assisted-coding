@@ -38,7 +38,7 @@ Using API for coding purposes is okay however coding oriented models and tools m
 | [**Claude Code**](https://docs.anthropic.com/en/docs/claude-code/overview) | Anthropic's CLI agent for code generation, debugging, and refactoring |
 | [**OpenAI Codex CLI**](https://github.com/openai/codex) | OpenAI's terminal coding agent for editing, running, and reviewing code |
 | [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) | Google's command-line coding assistant for repo-aware development workflows |
-| [**GitHub Copilot CLI**](https://github.com/github/copilot-cli) | Command-line interface for GitHub Copilot |
+| [**GitHub Copilot CLI**](https://github.com/github/copilot-cli) | Archived project (historical reference only; prefer current Copilot Chat/agent workflows) |
 | [**OpenCode**](https://opencode.ai/) | OpenSource AI coding assistant for code generation, debugging, and refactoring |
 
 <p><small>Use opencode for Blablador models https://sdlaml.pages.jsc.fz-juelich.de/ai/guides/blablador_opencode</small></p>
@@ -65,3 +65,4 @@ Using API for coding purposes is okay however coding oriented models and tools m
 
 <p><small>Use jan.ai for Blablador models https://sdlaml.pages.jsc.fz-juelich.de/ai/guides/blablador_on_janai</small></p>
 
+<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code overview</a>, <a href="https://github.com/openai/codex">OpenAI Codex</a>, <a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a>, <a href="https://github.com/github/copilot-cli">GitHub Copilot CLI (archived)</a></small></p>

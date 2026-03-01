@@ -17,19 +17,21 @@ Subagents are specialized AI assistants that run in isolated contexts with their
 - **Parallelism** - multiple subagents can work simultaneously on different parts of a codebase
 - **Cost control** - route simple tasks to faster, cheaper models
 
-## Built-in subagent types (Claude Code)
+## Built-in subagent patterns (Claude Code)
 
-| Type | Model | Tools | Purpose |
-|------|-------|-------|---------|
-| **Explore** | Haiku (fast) | Read-only | File discovery, code search, codebase exploration |
-| **Plan** | Inherited | Read-only | Research and design during plan mode |
-| **General-purpose** | Inherited | All | Complex multi-step tasks requiring both reading and writing |
+| Type | Typical tools | Purpose |
+|------|---------------|---------|
+| **Explore** | Usually read-focused | File discovery, code search, codebase exploration |
+| **Plan** | Usually read-focused | Research and design during plan mode |
+| **General-purpose** | Full tool access | Complex multi-step tasks requiring both reading and writing |
 
 Claude automatically delegates to these based on what the task requires. You can also request a specific type:
 
 ```
 Use an Explore subagent to find all files that import the auth module
 ```
+
+<p><small>Source: <a href="https://docs.anthropic.com/en/docs/claude-code/sub-agents">Anthropic Claude Code subagents</a></small></p>
 
 ## Custom subagents
 

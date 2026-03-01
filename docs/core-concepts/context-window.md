@@ -70,7 +70,7 @@ You can usually tell autocompaction has occurred when the model seems to "forget
 A full context window means the model is juggling a large amount of information at once. This can lead to:
 
 - **Conflicting instructions** - earlier guidance may contradict later corrections, and the model has to choose which to follow. With more context, there are more opportunities for ambiguity
-- **Diluted focus** - the model gives roughly equal weight to all tokens in context. Important instructions from early in the conversation compete with less relevant content from recent messages
+- **Diluted focus** - with long contexts, important instructions must compete with lots of other content. This can make key requirements less salient unless they are repeated clearly
 - **Stale context** - code you discussed at the start of the session may have since been modified. The model might reference outdated versions of files that are still sitting in the context window
 
 ### Degraded performance

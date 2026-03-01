@@ -15,10 +15,10 @@ The **Model Context Protocol (MCP)** is an open standard for connecting language
 ## Adding MCP servers (Claude Code)
 
 ```bash
-claude mcp add --transport http -s user context7 https://mcp.context7.com/mcp
+claude mcp add --transport http --scope user context7 https://mcp.context7.com/mcp
 ```
 
-## Configuration scopes `-s`
+## Configuration scopes `--scope` (alias: `-s`)
 
 | Scope | flag | Stored in  | Use for |
 |-------|-------|--------|---------|
@@ -74,3 +74,5 @@ Browse the full directory at [github.com/modelcontextprotocol/servers](https://g
 ## MCP in other tools
 
 **Cursor** also supports MCP servers, configured in its settings UI or via JSON config. The protocol is tool-agnostic by design — an MCP server built for Claude Code works with any MCP-compatible client.
+
+<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/mcp">Anthropic MCP docs</a>, <a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol docs</a></small></p>

@@ -10,7 +10,7 @@ Skills are reusable instruction sets that extend what an AI assistant can do. Yo
 
 ## Built-in vs custom skills
 
-Claude Code ships with built-in skills like `/commit`, `/review-pr`, and `/init`. You can create your own for workflows you repeat often.
+Claude Code includes built-in slash commands such as `/init` and `/review`, and you can create your own skills for workflows you repeat often.
 
 **`~/.claude/skills/explain-code/SKILL.md`** (available in all projects):
 
@@ -86,3 +86,5 @@ For complex skills, add supporting files alongside `SKILL.md`:
 ## Analogous features in other tools
 
 **Cursor** uses rules files (`.cursor/rules/`) that inject instructions into conversations, serving a similar purpose to skills but without the invocation model or argument passing. **GitHub Copilot** has instructions files (`.github/copilot-instructions.md`) that set project-level context.
+
+<p><small>Source: <a href="https://docs.anthropic.com/en/docs/claude-code/slash-commands">Anthropic Claude Code slash commands</a></small></p>
