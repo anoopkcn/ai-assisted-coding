@@ -12,7 +12,7 @@ Language models don't retrieve pre-written answers. They **generate** text one t
 
 ## How models generate text
 
-When a model processes your prompt, it produces a probability distribution over its entire vocabulary for the next token. For example, given the prompt `def calculate_`, the model might assign:
+When a model processes your prompt, it produces a probability distribution over its entire vocabulary for the next token. For example, given the prompt `def calculate_`, the model might assign certain probability for next token(word):
 
 - `total` → 18% probability
 - `sum` → 12% probability
@@ -20,7 +20,7 @@ When a model processes your prompt, it produces a probability distribution over 
 - `average` → 7% probability
 - thousands of other tokens with smaller probabilities
 
-The model then **samples** from this distribution to pick the next token. This is why the same prompt can produce different outputs each time. The model doesn't always pick the most likely token.
+The model then **samples** from this distribution to pick the next token. This is why the same prompt can produce different outputs each time. **The model doesn't always pick the most likely token**.
 
 The sampling parameters let you control how these choices are made.
 
