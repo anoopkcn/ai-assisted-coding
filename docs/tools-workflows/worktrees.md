@@ -26,9 +26,6 @@ git worktree list
 
 # Create one manually
 git worktree add ../feature-branch -b my-feature
-
-# Remove when done
-git worktree remove ../feature-branch
 ```
 
 This works with any tool, not just Claude Code.
@@ -41,9 +38,6 @@ claude --worktree feature-auth
 
 # Auto-generated name
 claude --worktree
-
-# From within a running session
-> Start a worktree for the payment integration
 ```
 
 This creates a directory at `.claude/worktrees/<name>/` with a new branch `worktree-<name>`, giving you a fully isolated copy of the repository.
