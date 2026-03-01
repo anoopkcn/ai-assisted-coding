@@ -46,3 +46,5 @@ For risk controls, see [Safety and Risk Management](/best-practices/safety-and-r
 ## Pair with AI, Don't Defer to It
 
 Think of AI as a junior developer with broad knowledge but no judgment. You provide the direction, review the output, and make the final call.
+
+<p><small>Sources: <a href="https://git-scm.com/docs/gittutorial">Git tutorial and workflow basics</a>, <a href="https://trunkbaseddevelopment.com/short-lived-feature-branches/">Trunk-based development (small, incremental changes)</a>, <a href="https://cloud.google.com/devops/state-of-devops">DORA / State of DevOps reports</a></small></p>

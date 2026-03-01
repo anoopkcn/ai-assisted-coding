@@ -101,3 +101,5 @@ Before finalizing:
 3. Check that tests cover happy path and key edge cases
 Then provide final patch and test commands.
 ```
+
+<p><small>Sources: <a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI prompt engineering guide</a>, <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview">Anthropic prompt engineering overview</a>, <a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></small></p>

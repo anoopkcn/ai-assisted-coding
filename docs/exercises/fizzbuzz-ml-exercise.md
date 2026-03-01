@@ -169,6 +169,8 @@ Before writing any code, help me plan:
 
 </details>
 
+<p><small>References for the planning choices: <a href="https://joelgrus.com/2018/05/23/fizz-buzz-in-tensorflow/">Fizz Buzz in TensorFlow (feature encoding intuition)</a>, <a href="https://en.wikipedia.org/wiki/Inclusion%E2%80%93exclusion_principle">Inclusion-exclusion principle (class frequency for divisible-by-3/5 patterns)</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html">scikit-learn train_test_split (stratification)</a>, <a href="https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html">PyTorch CrossEntropyLoss (multiclass classification)</a></small></p>
+
 **Anti-pattern:**
 
 ```text

@@ -87,4 +87,4 @@ For complex skills, add supporting files alongside `SKILL.md`:
 
 **Cursor** uses rules files (`.cursor/rules/`) that inject instructions into conversations, serving a similar purpose to skills but without the invocation model or argument passing. **GitHub Copilot** has instructions files (`.github/copilot-instructions.md`) that set project-level context.
 
-<p><small>Source: <a href="https://docs.anthropic.com/en/docs/claude-code/slash-commands">Anthropic Claude Code slash commands</a></small></p>
+<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/slash-commands">Anthropic Claude Code slash commands</a>, <a href="https://docs.cursor.com/context/rules">Cursor rules documentation</a>, <a href="https://code.visualstudio.com/docs/copilot/copilot-customization">GitHub Copilot custom instructions</a></small></p>

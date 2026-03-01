@@ -75,4 +75,4 @@ Browse the full directory at [github.com/modelcontextprotocol/servers](https://g
 
 **Cursor** also supports MCP servers, configured in its settings UI or via JSON config. The protocol is tool-agnostic by design — an MCP server built for Claude Code works with any MCP-compatible client.
 
-<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/mcp">Anthropic MCP docs</a>, <a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol docs</a></small></p>
+<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/mcp">Anthropic MCP docs</a>, <a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol docs</a>, <a href="https://docs.cursor.com/context/model-context-protocol">Cursor MCP documentation</a></small></p>

@@ -92,3 +92,5 @@ Constraints: <style/performance/security/dependency limits>
 Done criteria: <observable requirements>
 Output format: <plan / patch / tests / notes>
 ```
+
+<p><small>Sources: <a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI prompt engineering guide</a>, <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview">Anthropic prompt engineering overview</a></small></p>

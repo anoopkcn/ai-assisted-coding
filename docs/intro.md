@@ -45,3 +45,5 @@ Start with [Core Concepts](/category/core-concepts) to understand how AI coding 
 | New to AI coding tools | [Core Concepts](/category/core-concepts) | [Prompt Engineering](/category/prompt-engineering) -> [Best Practices](/category/best-practices) |
 | Working developers adopting tools now | [Tools & Workflows](/category/tools--workflows) | [Best Practices](/category/best-practices) -> [Exercises](/category/exercises) |
 | Team leads and enablement owners | [Best Practices](/category/best-practices) | [Tools & Workflows](/category/tools--workflows) -> [Core Concepts](/category/core-concepts) |
+
+<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code overview</a>, <a href="https://platform.openai.com/docs/overview">OpenAI platform overview</a>, <a href="https://ai.google.dev/gemini-api/docs">Gemini API docs</a></small></p>

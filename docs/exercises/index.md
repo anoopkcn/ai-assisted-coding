@@ -39,3 +39,5 @@ For each task in an exercise, check:
 | Exercise | Difficulty | Topics Practiced |
 |----------|-----------|-----------------|
 | [FizzBuzz ML exercise](fizzbuzz-ml-exercise) | Intermediate | TDD(test-driven development), prompt engineering, PyTorch, agentic workflows, project context |
+
+<p><small>Sources: <a href="https://arxiv.org/abs/2303.08733">Practices and Challenges of Using GitHub Copilot</a>, <a href="https://survey.stackoverflow.co/2024/">Stack Overflow Developer Survey (AI tooling trends)</a></small></p>

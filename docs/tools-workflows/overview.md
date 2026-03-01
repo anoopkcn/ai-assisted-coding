@@ -65,4 +65,4 @@ Using API for coding purposes is okay however coding oriented models and tools m
 
 <p><small>Use jan.ai for Blablador models https://sdlaml.pages.jsc.fz-juelich.de/ai/guides/blablador_on_janai</small></p>
 
-<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code overview</a>, <a href="https://github.com/openai/codex">OpenAI Codex</a>, <a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a>, <a href="https://github.com/github/copilot-cli">GitHub Copilot CLI (archived)</a></small></p>
+<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code overview</a>, <a href="https://github.com/openai/codex">OpenAI Codex</a>, <a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a>, <a href="https://github.com/github/copilot-cli">GitHub Copilot CLI (archived)</a>, <a href="https://codeassist.google/">Gemini Code Assist</a>, <a href="https://github.com/features/copilot">GitHub Copilot</a>, <a href="https://cursor.com/">Cursor</a>, <a href="https://windsurf.com/">Windsurf</a>, <a href="https://opencode.ai/">OpenCode</a></small></p>

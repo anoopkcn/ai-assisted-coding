@@ -94,6 +94,8 @@ Large contexts don't just risk information loss and ambiguity, they can reduce o
 - Some tools use retrieval and persistent memory features that reduce, but do not eliminate, context pressure
 - For short one-step edits, context optimization has minimal practical impact
 
+<p><small>Additional sources: <a href="https://docs.anthropic.com/en/api/messages">Anthropic Messages API (stateless multi-turn behavior)</a>, <a href="https://platform.openai.com/docs/guides/conversation-state">OpenAI conversation state guide</a>, <a href="https://docs.anthropic.com/en/docs/claude-code/slash-commands#compact">Claude Code /compact behavior</a>, <a href="https://docs.anthropic.com/en/docs/claude-code/costs">Claude Code costs and context management</a></small></p>
+
 ## Context window limit for popular models
 
 Different models offer different context window sizes and pricing. Larger context windows allow for longer conversations and more code to be analyzed at once, but typically cost more per million token.

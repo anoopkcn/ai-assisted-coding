@@ -31,7 +31,7 @@ Claude automatically delegates to these based on what the task requires. You can
 Use an Explore subagent to find all files that import the auth module
 ```
 
-<p><small>Source: <a href="https://docs.anthropic.com/en/docs/claude-code/sub-agents">Anthropic Claude Code subagents</a></small></p>
+<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/sub-agents">Anthropic Claude Code subagents</a>, <a href="https://docs.cursor.com/agent/overview">Cursor agent overview</a>, <a href="https://docs.cursor.com/tools/overview">Cursor tools overview</a></small></p>
 
 ## Custom subagents
 

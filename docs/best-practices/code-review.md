@@ -49,3 +49,5 @@ AI-generated code needs the same scrutiny as human-written code — sometimes mo
 - [ ] Edge cases are handled
 
 For broader operational safeguards, see [Safety and Risk Management](/best-practices/safety-and-risk).
+
+<p><small>Sources: <a href="https://arxiv.org/abs/2108.09293">Asleep at the Keyboard? Assessing the Security of GitHub Copilot's Code Contributions</a>, <a href="https://arxiv.org/abs/2211.03622">Do Users Write More Insecure Code with AI Assistants?</a>, <a href="https://cwe.mitre.org/top25/archive/2024/2024_cwe_top25.html">MITRE CWE Top 25</a></small></p>

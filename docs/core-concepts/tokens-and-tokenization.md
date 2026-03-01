@@ -64,4 +64,4 @@ This means that even with large context windows, you can fill them up faster tha
 - **Check token counts when cost matters** - most API dashboards show token usage per request, and tools like Claude Code show context window consumption in real time
 - **Different languages tokenize differently** - verbose languages like Java tend to use more tokens per line than concise ones like Python
 
-<p><small>Sources: <a href="https://platform.openai.com/tokenizer">OpenAI tokenizer reference</a>, <a href="https://github.com/google/sentencepiece">SentencePiece</a>, <a href="https://platform.openai.com/pricing">OpenAI pricing</a>, <a href="https://www.anthropic.com/pricing">Anthropic pricing</a></small></p>
+<p><small>Sources: <a href="https://platform.openai.com/tokenizer">OpenAI tokenizer reference</a>, <a href="https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken">OpenAI token counting with tiktoken</a>, <a href="https://github.com/google/sentencepiece">SentencePiece</a>, <a href="https://platform.openai.com/pricing">OpenAI pricing</a>, <a href="https://www.anthropic.com/pricing">Anthropic pricing</a></small></p>

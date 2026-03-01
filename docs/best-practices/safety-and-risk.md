@@ -61,3 +61,5 @@ Use lower autonomy (more human checkpoints) for:
 - Security fixes and incident-response code paths
 
 For related review guidance, see [Reviewing AI-Generated Code](/best-practices/code-review) and [Workflow Tips](/best-practices/workflow-tips).
+
+<p><small>Sources: <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP Top 10 for LLM Applications</a>, <a href="https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks">Anthropic: Mitigate jailbreaks and prompt injections</a>, <a href="https://platform.openai.com/docs/guides/agent-builder-safety">OpenAI: Safety in building agents</a>, <a href="https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning">GitHub secret scanning</a></small></p>
