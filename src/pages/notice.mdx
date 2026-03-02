@@ -2,20 +2,38 @@
 title: Notice
 ---
 
-import Admonition from '@theme/Admonition';
+<div className="notice-page">
+  <p className="notice-lead">
+    Before using AI-assisted coding tools, consider the following guidelines to ensure responsible and compliant use.
+  </p>
 
-<Admonition type="info" title="Data and Privacy Policy">
-Before using any AI-assisted coding tool, review the data and privacy policies on your machine and in your organization. Confirm how code, prompts, and context are collected, stored, and processed. Some tools send snippets or telemetry to external servers.
-</Admonition>
+  <div className="notice-grid">
+    <section className="notice-card">
+      <h2>Data and Privacy Policy</h2>
+      <p>
+        Review the data and privacy policies on your machine and in your organization. Confirm how code, prompts, and context are collected, stored, and processed. Some tools send snippets or telemetry to external servers.
+      </p>
+    </section>
 
-<Admonition type="info" title="Tool Licensing">
-Check the license terms for every AI-assisted coding tool. Make sure your use complies with both the tool license and your software licensing obligations.
-</Admonition>
+    <section className="notice-card">
+      <h2>Tool Licensing</h2>
+      <p>
+        Check the license terms for every AI-assisted coding tool. Make sure your use complies with both the tool license and your software licensing obligations.
+      </p>
+    </section>
 
-<Admonition type="warning" title="AI Policy for Contributing Projects">
-Before contributing, review the project or repository AI policy. Some communities require disclosure of AI use, while others limit or prohibit AI-generated code. Follow contribution rules and be transparent about AI assistance.
-</Admonition>
+    <section className="notice-card">
+      <h2>AI Policy for Contributing Projects</h2>
+      <p>
+        Before contributing, review the project or repository AI policy. Some communities require disclosure of AI use, while others limit or prohibit AI-generated code. Follow contribution rules and be transparent about AI assistance.
+      </p>
+    </section>
 
-<Admonition type="info" title="Environmental Impact and Cost">
-Consider the environmental and financial cost of AI-assisted coding. Large models use substantial compute, energy, and money. Avoid unnecessary API calls and use AI intentionally with efficient workflows.
-</Admonition>
+    <section className="notice-card">
+      <h2>Environmental Impact and Cost</h2>
+      <p>
+        Consider the environmental and financial cost of AI-assisted coding. Large models use substantial compute, energy, and money. Avoid unnecessary API calls and use AI intentionally with efficient workflows.
+      </p>
+    </section>
+  </div>
+</div>

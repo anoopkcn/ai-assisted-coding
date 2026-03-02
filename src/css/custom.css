@@ -206,3 +206,55 @@ pre > code {
   border-color: color-mix(in srgb, var(--ifm-color-primary) 25%, transparent);
   background: var(--ifm-background-surface-color);
 }
+
+/* Notice page */
+.notice-page {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+.notice-lead {
+  margin: 0;
+  font-size: 1.05rem;
+  text-align: center;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.notice-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 520px) {
+  .notice-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.notice-card {
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 15%, transparent);
+  background: var(--ifm-background-surface-color);
+}
+
+.notice-card h2 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.notice-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .notice-card {
+  border-color: color-mix(in srgb, var(--ifm-color-primary) 25%, transparent);
+  background: var(--ifm-background-surface-color);
+}
