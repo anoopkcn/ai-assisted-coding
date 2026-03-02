@@ -22,7 +22,7 @@ const config = {
   },
 
   plugins: [
-    './plugins/model-pricing',
+    './plugins/models-details',
     [
       '@easyops-cn/docusaurus-search-local',
       {

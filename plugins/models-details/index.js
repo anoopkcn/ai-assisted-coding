@@ -26,7 +26,7 @@ function shouldExclude(id) {
 
 module.exports = function modelPricingPlugin() {
   return {
-    name: "model-pricing",
+    name: "models-details",
     async loadContent() {
       const res = await fetch("https://models.dev/api.json");
       const data = await res.json();

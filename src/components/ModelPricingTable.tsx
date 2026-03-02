@@ -22,7 +22,7 @@ function formatPrice(price?: number): string {
 }
 
 export default function ModelPricingTable() {
-  const { models, fetchedAt } = usePluginData("model-pricing") as {
+  const { models, fetchedAt } = usePluginData("models-details") as {
     models: Model[];
     fetchedAt: string;
   };
