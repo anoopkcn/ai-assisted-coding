@@ -10,6 +10,8 @@ import Mascot from '@site/src/components/Mascot';
 
 The **Model Context Protocol (MCP)** is an open standard for connecting language models to external tools and data sources. Think of it like USB for AI tools, a standardized way to plug in new capabilities without building custom integrations for each one.
 
+Adding MCP's may not always give you better results. MCP can also use up a lot of your available context. Read [Anthropic's analysis of code execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) for more details.
+
 > Last reviewed: February 26, 2026. Verify CLI flags and auth flows against current vendor docs before rollout.
 
 ## Adding MCP servers (Claude Code)
