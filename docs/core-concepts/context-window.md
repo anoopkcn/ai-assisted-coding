@@ -79,6 +79,7 @@ Large contexts don't just risk information loss and ambiguity, they can reduce o
 
 - **Slower responses** - processing more tokens takes more time and costs more per request
 - **Lower accuracy** - models perform worse on tasks that require finding specific information buried in long contexts (the ["needle in a haystack"](https://arize.com/blog-course/the-needle-in-a-haystack-test-evaluating-the-performance-of-llm-rag-systems/) problem). Research such as [*Lost in the Middle*](https://arxiv.org/abs/2307.03172) (Liu et al.) and [*Context Rot*](https://research.trychroma.com/context-rot) (Chroma Research) demonstrates that performance degrades as context length increases, with information in the middle of long contexts being particularly hard for models to use
+![Lost in the middle effect](./img/context_window_impact.svg)
 - **Reduced instruction following** - with thousands of tokens of conversation history, the model is more likely to drift from your original intent or constraints
 
 ### Practical tips
