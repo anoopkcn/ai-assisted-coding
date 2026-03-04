@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 ---
 
 import Mascot from '@site/src/components/Mascot';
@@ -61,6 +61,21 @@ Subagents can be scoped to a project (`.claude/agents/`) or to all your projects
 
 If your tool version uses `tools` instead of `allowed-tools`, use the key your tool expects.
 
-## Comparison with other tools
+### Download custom subagents I use for analysis and exploration:
 
-**Cursor** has an agent mode that operates similarly to Claude Code's agentic loop - it can read, write, and run commands autonomously. However, Cursor doesn't expose the concept of multiple specialized subagents running in parallel; its agent mode is a single execution context.
+**Sage** — A powerful "second opinion" reasoning agent for complex analysis, debugging, architecture review, and hard problems. Use when the main agent needs deeper reasoning — code review, root cause analysis, refactoring strategy, tricky bugs, security audits, or evaluating trade-offs.
+
+<div className="contact-actions" style={{justifyContent: 'flex-start'}}>
+  <a className="contact-button" href="/ai-assisted-coding/downloads/sage.md" download>
+    Download Sage subagent
+  </a>
+</div>
+<p></p>
+**Scribe** — A research agent for searching and reading remote codebases on GitHub. Use when you need to look up how a library or framework is implemented, search across multiple repositories, find usage examples in open-source code, investigate dependency source code, or trace bugs into third-party libraries.
+
+<div className="contact-actions" style={{justifyContent: 'flex-start'}}>
+  <a className="contact-button" href="/ai-assisted-coding/downloads/scribe.md" download>
+    Download Scribe subagent
+  </a>
+</div>
+<p><small> scribe requires you to have `gh` the github CLI installed and authenticated: https://cli.github.com </small></p>

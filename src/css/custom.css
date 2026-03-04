@@ -120,19 +120,24 @@ pre > code {
 }
 
 .contact-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
   background: transparent;
   color: var(--ifm-color-primary);
-  padding: 0.45rem 1.25rem;
+  padding: 0.6rem 1.25rem;
   font-size: 0.9rem;
   font-weight: 600;
-  line-height: 1.4;
-  text-align: center;
+  line-height: 1;
   white-space: nowrap;
   transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.contact-button p {
+  margin: 0;
 }
 
 .contact-button:hover {
