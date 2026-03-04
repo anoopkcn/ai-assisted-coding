@@ -67,7 +67,7 @@ If your tool version uses `tools` instead of `allowed-tools`, use the key your t
 
 <div className="contact-actions" style={{justifyContent: 'flex-start'}}>
   <a className="contact-button" href="/ai-assisted-coding/downloads/sage.md" download>
-    Download Sage subagent
+    Download the markdown for Sage subagent
   </a>
 </div>
 <p></p>
@@ -81,10 +81,10 @@ paths and find where it fails: @src/services/payment.py
 
 <div className="contact-actions" style={{justifyContent: 'flex-start'}}>
   <a className="contact-button" href="/ai-assisted-coding/downloads/scribe.md" download>
-    Download Scribe subagent
+    Download the markdown for Scribe subagent
   </a>
 </div>
-<p><small> scribe requires you to have `gh` the github CLI installed and authenticated: https://cli.github.com </small></p>
+<p><small> <b>scribe</b> subagent requires you to have `gh` the github CLI installed and authenticated: https://cli.github.com </small></p>
 
 Example prompt:
 ```
