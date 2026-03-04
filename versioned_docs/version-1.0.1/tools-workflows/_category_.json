@@ -1,0 +1,8 @@
+{
+  "label": "Tools & Workflows",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "AI coding tools and how to integrate them into your development workflow."
+  }
+}
