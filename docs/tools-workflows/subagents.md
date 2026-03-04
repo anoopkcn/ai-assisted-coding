@@ -71,6 +71,12 @@ If your tool version uses `tools` instead of `allowed-tools`, use the key your t
   </a>
 </div>
 <p></p>
+
+Example prompt:
+```
+The function check_balance() returns None intermittently. Use the sage to trace all code 
+paths and find where it fails: @src/services/payment.py
+```
 **Scribe** — A research agent for searching and reading remote codebases on GitHub. Use when you need to look up how a library or framework is implemented, search across multiple repositories, find usage examples in open-source code, investigate dependency source code, or trace bugs into third-party libraries.
 
 <div className="contact-actions" style={{justifyContent: 'flex-start'}}>
@@ -79,3 +85,13 @@ If your tool version uses `tools` instead of `allowed-tools`, use the key your t
   </a>
 </div>
 <p><small> scribe requires you to have `gh` the github CLI installed and authenticated: https://cli.github.com </small></p>
+
+Example prompt:
+```
+Use the scribe to find open-source projects that implement 
+rate limiting middleware in Starlette. Show me different approaches.
+```
+```
+Use the scribe to check if any of our team's repos already have 
+a retry decorator utility so I don't duplicate it.
+```
