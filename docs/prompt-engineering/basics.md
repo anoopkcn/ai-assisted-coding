@@ -69,7 +69,7 @@ I need a refund and this product keeps crashing.
 </email_draft>
 ```
 
-Explicit separators reduce misreads where model treats your instructions as part of the data (or vice versa).
+**Explicit separators reduce misreads** where model treats your instructions as part of the data (or vice versa).
 
 ## Ask for a Specific Output Format
 

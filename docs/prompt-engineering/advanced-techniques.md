@@ -34,7 +34,7 @@ function and what edge cases it handles.
 Set boundaries to get code that fits your project:
 
 ```
-Implement the search feature using only the standard library —
+Implement the search feature using only the standard library,
 no external dependencies. Target Python 3.10+.
 ```
 
@@ -60,29 +60,13 @@ First, provide a plan only: architecture impact, files to edit,
 and migration risk. Do not write code yet.
 ```
 
-## Use a Complex Prompt Blueprint
-
-For harder tasks, a consistent structure performs better than ad-hoc prompts. A strong blueprint:
-
-1. **Task context** (role + goal)
-2. **Tone/context** (optional)
-3. **Detailed rules** (must/must-not)
-4. **Examples** (especially edge cases)
-5. **Input data** (in explicit tags)
-6. **Immediate task** (what to do now)
-7. **Think step-by-step instruction** (when task is multi-stage)
-8. **Output format contract**
-9. **Optional prefill**
-
-Use more elements first to get reliability, then remove what is unnecessary.
-
-## Ground Answers in Real Files
+## Ground Answers in Real Files and line numbers
 
 Reduce hallucinations by requiring concrete file references:
 
 ```
 Only use APIs and modules that already exist in this repository.
-List exact files/functions you used as references.
+List exact files and functions with line numbers you used as references.
 If something is missing, state it explicitly instead of inventing it.
 ```
 
@@ -162,10 +146,9 @@ Prompt chaining gives you control points and makes failures easier to debug.
 Treat prompts like code: regression-test them.
 
 1. Build 10-30 representative inputs
-2. Define expected outputs or a scoring rubric
-3. Compare old vs new prompt
-4. Track pass rate and failure modes
+2. Define expected outputs or a scoring metric
+3. Track pass rate and failure modes
 
-Use code-based checks where possible; use rubric/model grading for subjective tasks.
+Use code-based checks where possible.
 
 <p><small>Sources: <a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI prompt engineering guide</a>, <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview">Anthropic prompt engineering overview</a>, <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags">Anthropic: XML tags</a>, <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts">Anthropic: Prompt chaining</a>, <a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a>, <a href="https://github.com/anthropics/prompt-eng-interactive-tutorial">prompt-eng-interactive-tutorial</a></small></p>

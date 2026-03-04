@@ -35,9 +35,9 @@ Use an Explore subagent to find all files that import the auth module
 
 ## Custom subagents
 
-Create a custom subagent by adding a `SKILL.md` file (see [Skills](skills.md) for the full skill format):
+Create a custom subagent by adding a markdown file.
 
-**`.claude/agents/code-reviewer/SKILL.md`**
+**`.claude/agents/code-reviewer.md`**
 
 ```yaml
 ---
@@ -45,7 +45,6 @@ name: code-reviewer
 description: Reviews code for quality and best practices
 allowed-tools: Read, Grep, Glob
 model: sonnet
-maxTurns: 10
 ---
 
 You are a senior code reviewer. When invoked:
@@ -54,14 +53,12 @@ You are a senior code reviewer. When invoked:
 2. Check error handling and edge cases
 3. Flag any security concerns
 
-Organize feedback by priority: Critical → Warning → Suggestion
+Organize feedback by priority: Critical -> Warning -> Suggestion
 ```
 
 Subagents can be scoped to a project (`.claude/agents/`) or to all your projects (`~/.claude/agents/`).
 
-If your tool version uses `tools` instead of `allowed-tools`, use the key your tool expects.
-
-### Download custom subagents I use for analysis and exploration:
+### Download my custom subagents
 
 **Sage** — A powerful "second opinion" reasoning agent for complex analysis, debugging, architecture review, and hard problems. Use when the main agent needs deeper reasoning — code review, root cause analysis, refactoring strategy, tricky bugs, security audits, or evaluating trade-offs.
 
@@ -95,3 +92,23 @@ rate limiting middleware in Starlette. Show me different approaches.
 Use the scribe to check if any of our team's repos already have 
 a retry decorator utility so I don't duplicate it.
 ```
+
+If you want these subagents to act autonomously(without user input) then change the [access permissions for `gh` tool](https://code.claude.com/docs/en/permissions#wildcard-patterns) 
+
+**WARNING: Giving unvetted `write` access to any tool is not a good idea**
+
+<details>
+
+<summary>Edit read permissions for `gh` tool</summary>
+
+Edit the settings file `~/.config/claude/settings.json`
+
+For example set permissions for the  `gh api` command:
+```json
+{
+  "permissions": [
+    { "tool": "Bash", "matches": { "cmd": "gh api *" }, "action": "allow" }
+  ]
+}
+```
+</details>
