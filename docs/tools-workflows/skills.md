@@ -25,10 +25,9 @@ allowed-tools: Read, Grep, Glob
 
 When explaining code:
 
-1. **Analogy first**: Compare the code to something from everyday life
-2. **Draw a diagram**: Use ASCII art to show flow or structure
-3. **Walk through**: Step-by-step explanation of what happens
-4. **Highlight a gotcha**: Common mistakes or misconceptions
+1. **Draw a diagram**: Use ASCII art to show flow or structure
+2. **Walk through**: Step-by-step explanation of what happens
+3. **Highlight a gotcha**: Common mistakes or misconceptions
 ```
 
 Then invoke it:
@@ -37,7 +36,7 @@ Then invoke it:
 /explain-code src/auth/middleware.ts
 ```
 
-## Key frontmatter fields
+## Key `frontmatter` fields
 
 | Field | Purpose |
 |-------|---------|
@@ -87,4 +86,9 @@ For complex skills, add supporting files alongside `SKILL.md`:
 
 **Cursor** uses rules files (`.cursor/rules/`) that inject instructions into conversations, serving a similar purpose to skills but without the invocation model or argument passing. **GitHub Copilot** has instructions files (`.github/copilot-instructions.md`) that set project-level context.
 
-<p><small>Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/slash-commands">Anthropic Claude Code slash commands</a>, <a href="https://docs.cursor.com/context/rules">Cursor rules documentation</a>, <a href="https://code.visualstudio.com/docs/copilot/copilot-customization">GitHub Copilot custom instructions</a></small></p>
+<p><small>
+Sources: <a href="https://docs.anthropic.com/en/docs/claude-code/slash-commands">Anthropic Claude Code slash commands</a>,
+<a href="https://code.claude.com/docs/en/skills">Claude Skills</a>,
+<a href="https://docs.cursor.com/context/rules">Cursor rules documentation</a>,
+<a href="https://code.visualstudio.com/docs/copilot/copilot-customization">GitHub Copilot custom instructions</a>
+</small></p>
